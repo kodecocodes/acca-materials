@@ -1,0 +1,32 @@
+<resources>
+
+  <!-- Base application Theme -->
+  <!-- FINAL: Add DayNight in Chapter 5. Before it should be Theme.MaterialComponents.Light
+  .NoActionBar
+   -->
+  <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <!-- Splash Screen Theme -->
+  <style name="SplashTheme" parent="AppTheme">
+    <item name="android:windowBackground">@drawable/splash_background</item>
+    <item name="android:windowTranslucentStatus">true</item>
+    <item name="android:windowTranslucentNavigation">true</item>
+  </style>
+
+  <style name="NachoRatingBar" parent="@android:style/Widget.RatingBar">
+    <item name="android:progressDrawable">@drawable/nacho_rating_selector</item>
+  </style>
+
+  <style name="AppTheme.TextKicker">
+    <item name="textAllCaps">true</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/colorAccent</item>
+    <item name="android:layout_marginTop">@dimen/space_normal</item>
+    <item name="android:layout_marginBottom">@dimen/space_small</item>
+  </style>
+</resources>

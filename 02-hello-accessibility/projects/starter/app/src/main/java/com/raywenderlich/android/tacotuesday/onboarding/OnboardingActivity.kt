@@ -71,7 +71,7 @@ class OnboardingActivity : FragmentActivity() {
             MainActivity.startActivity(this@OnboardingActivity)
             this.cancel()
           } else {
-            binding.onboardingPager.currentItem = binding.onboardingPager.currentItem + 1
+            binding.onboardingPager.currentItem++
           }
         }
       }
@@ -91,7 +91,7 @@ class OnboardingActivity : FragmentActivity() {
       super.onBackPressed()
     } else {
       // Otherwise, select the previous step.
-      binding.onboardingPager.currentItem = binding.onboardingPager.currentItem - 1
+      binding.onboardingPager.currentItem--
     }
   }
 

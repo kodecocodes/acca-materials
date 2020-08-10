@@ -42,10 +42,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager
+import com.raywenderlich.android.tacotuesday.data.RecipeRepository
 import com.raywenderlich.android.tacotuesday.databinding.ActivityMainBinding
 import com.raywenderlich.android.tacotuesday.onboarding.OnboardingActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
+import javax.inject.Inject
 import kotlin.random.Random
 
 @AndroidEntryPoint
@@ -91,7 +93,7 @@ class MainActivity : AppCompatActivity() {
       while (isActive) {
         withContext(Dispatchers.Main) {
           val randomMessage = options[Random.nextInt(options.size - 1)]
-          if (dialog?.isShowing != true) {
+          if (dialog?.isShowing != true && !isFinishing) {
             dialog = AlertDialog.Builder(this@MainActivity)
                 .setMessage(randomMessage)
                 .setPositiveButton("Close", null)
@@ -99,7 +101,7 @@ class MainActivity : AppCompatActivity() {
           }
         }
 
-        delay(120000) // 2 minutes
+        delay(60000) // 60 seconds
       }
     }
   }

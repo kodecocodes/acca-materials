@@ -33,31 +33,31 @@
   -->
 
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+  xmlns:app="http://schemas.android.com/apk/res-auto">
 
   <ConstraintSet android:id="@+id/start">
     <Constraint android:id="@+id/discover_recipe_card">
       <Layout
-          android:layout_width="270dp"
-          android:layout_height="424dp"
-          app:layout_constraintBottom_toTopOf="@id/discover_button_discard"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="@dimen/discover_card_width"
+        android:layout_height="@dimen/discover_card_height"
+        app:layout_constraintBottom_toTopOf="@id/discover_button_discard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     </Constraint>
 
     <Constraint android:id="@id/discover_recipe_card_new">
       <Layout
-          android:layout_width="270dp"
-          android:layout_height="424dp"
-          app:layout_constraintBottom_toTopOf="@id/discover_button_discard"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="@dimen/discover_card_width"
+        android:layout_height="@dimen/discover_card_height"
+        app:layout_constraintBottom_toTopOf="@id/discover_button_discard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
       <Transform
-          android:scaleX="0.90"
-          android:scaleY="0.90" />
+        android:scaleX="0.90"
+        android:scaleY="0.90" />
       <PropertySet android:alpha="0.7" />
     </Constraint>
   </ConstraintSet>
@@ -65,17 +65,17 @@
   <ConstraintSet android:id="@+id/discard">
     <Constraint android:id="@id/discover_recipe_card">
       <Layout
-          android:layout_width="270dp"
-          android:layout_height="424dp"
-          android:layout_marginBottom="80dp"
-          android:layout_marginEnd="200dp"
-          android:layout_marginTop="20dp"
-          app:layout_constraintEnd_toStartOf="parent" />
+        android:layout_width="@dimen/discover_card_width"
+        android:layout_height="@dimen/discover_card_height"
+        android:layout_marginTop="@dimen/discover_card_swiped_margin_top"
+        android:layout_marginEnd="@dimen/discover_card_swiped_margin_side"
+        android:layout_marginBottom="@dimen/discover_card_swiped_margin_bottom"
+        app:layout_constraintEnd_toStartOf="parent" />
     </Constraint>
     <Constraint android:id="@id/discover_recipe_card_new">
       <Transform
-          android:scaleX="1"
-          android:scaleY="1" />
+        android:scaleX="1"
+        android:scaleY="1" />
       <PropertySet android:alpha="1" />
     </Constraint>
   </ConstraintSet>
@@ -83,64 +83,64 @@
   <ConstraintSet android:id="@+id/try_it">
     <Constraint android:id="@id/discover_recipe_card">
       <Layout
-          android:layout_width="270dp"
-          android:layout_height="424dp"
-          android:layout_marginBottom="80dp"
-          android:layout_marginStart="200dp"
-          android:layout_marginTop="20dp"
-          app:layout_constraintStart_toEndOf="parent" />
+        android:layout_width="@dimen/discover_card_width"
+        android:layout_height="@dimen/discover_card_height"
+        android:layout_marginStart="@dimen/discover_card_swiped_margin_side"
+        android:layout_marginTop="@dimen/discover_card_swiped_margin_top"
+        android:layout_marginBottom="@dimen/discover_card_swiped_margin_bottom"
+        app:layout_constraintStart_toEndOf="parent" />
     </Constraint>
     <Constraint android:id="@id/discover_recipe_card_new">
       <Transform
-          android:scaleX="1"
-          android:scaleY="1" />
+        android:scaleX="1"
+        android:scaleY="1" />
       <PropertySet android:alpha="1" />
     </Constraint>
   </ConstraintSet>
 
   <Transition
-      android:id="@+id/startToDiscard"
-      app:constraintSetEnd="@+id/discard"
-      app:constraintSetStart="@+id/start">
+    android:id="@+id/startToDiscard"
+    app:constraintSetEnd="@+id/discard"
+    app:constraintSetStart="@+id/start">
 
     <KeyFrameSet>
 
       <KeyPosition
-          app:framePosition="50"
-          app:keyPositionType="pathRelative"
-          app:motionTarget="@id/discover_recipe_card"
-          app:percentY="0.1" />
+        app:framePosition="50"
+        app:keyPositionType="pathRelative"
+        app:motionTarget="@id/discover_recipe_card"
+        app:percentY="0.1" />
 
     </KeyFrameSet>
 
     <OnSwipe
-        app:dragDirection="dragLeft"
-        app:onTouchUp="autoComplete"
-        app:touchAnchorSide="left"
-        app:touchRegionId="@id/discover_recipe_card" />
+      app:dragDirection="dragLeft"
+      app:onTouchUp="autoComplete"
+      app:touchAnchorSide="left"
+      app:touchRegionId="@id/discover_recipe_card" />
 
   </Transition>
 
   <Transition
-      android:id="@+id/startToTry"
-      app:constraintSetEnd="@+id/try_it"
-      app:constraintSetStart="@+id/start">
+    android:id="@+id/startToTry"
+    app:constraintSetEnd="@+id/try_it"
+    app:constraintSetStart="@+id/start">
 
     <KeyFrameSet>
 
       <KeyPosition
-          app:framePosition="50"
-          app:keyPositionType="pathRelative"
-          app:motionTarget="@id/discover_recipe_card"
-          app:percentY="-0.1" />
+        app:framePosition="50"
+        app:keyPositionType="pathRelative"
+        app:motionTarget="@id/discover_recipe_card"
+        app:percentY="-0.1" />
 
     </KeyFrameSet>
 
     <OnSwipe
-        app:dragDirection="dragRight"
-        app:onTouchUp="autoComplete"
-        app:touchAnchorSide="right"
-        app:touchRegionId="@id/discover_recipe_card" />
+      app:dragDirection="dragRight"
+      app:onTouchUp="autoComplete"
+      app:touchAnchorSide="right"
+      app:touchRegionId="@id/discover_recipe_card" />
 
   </Transition>
 

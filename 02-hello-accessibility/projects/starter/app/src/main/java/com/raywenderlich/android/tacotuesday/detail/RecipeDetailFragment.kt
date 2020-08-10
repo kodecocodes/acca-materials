@@ -39,6 +39,7 @@ import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
@@ -60,6 +61,19 @@ class RecipeDetailFragment : Fragment() {
   private val viewModel: RecipeDetailViewModel by viewModels()
   private val markwon by getMarkwon()
 
+  private fun getMarkwon(): Lazy<Markwon> {
+    return lazy {
+      Markwon.builder(requireContext())
+          .usePlugin(object : AbstractMarkwonPlugin() {
+            override fun configureTheme(builder: MarkwonTheme.Builder) {
+              builder.linkColor(ContextCompat.getColor(requireContext(),
+                  R.color.colorPrimary))
+            }
+          })
+          .build()
+    }
+  }
+
   override fun onCreateView(
       inflater: LayoutInflater,
       container: ViewGroup?,
@@ -78,28 +92,27 @@ class RecipeDetailFragment : Fragment() {
   }
 
   private fun showRecipeDetails(recipe: Recipe) = with(binding) {
-    recipeDetailRecipe.text = recipe.recipe.toMarkdownOrDefaultText(
-        getString(R.string.recipe_detail_recipe))
-    recipeDetailRecipe.movementMethod = LinkMovementMethod.getInstance()
-    recipeDetailBaseLayer.text = recipe.baseLayer.toMarkdownOrDefaultText(
-        getString(R.string.recipe_detail_base_layer))
-    recipeDetailBaseLayer.movementMethod = LinkMovementMethod.getInstance()
-    recipeDetailCondiment.text = recipe.condiment.toMarkdownOrDefaultText(
-        getString(R.string.recipe_detail_condiment))
-    recipeDetailCondiment.movementMethod = LinkMovementMethod.getInstance()
-    recipeDetailMixin.text = recipe.mixin.toMarkdownOrDefaultText(
-        getString(R.string.recipe_detail_mixin))
-    recipeDetailMixin.movementMethod = LinkMovementMethod.getInstance()
-    recipeDetailSeasoning.text = recipe.seasoning.toMarkdownOrDefaultText(
-        getString(R.string.recipe_detail_seasoning))
-    recipeDetailSeasoning.movementMethod = LinkMovementMethod.getInstance()
-    recipeDetailShell.text = recipe.shell.toMarkdownOrDefaultText(
-        getString(R.string.recipe_detail_shell))
-    recipeDetailShell.movementMethod = LinkMovementMethod.getInstance()
+    recipeDetailRecipe.setMarkdown(recipe.recipe.toMarkdownOrDefaultText(
+        getString(R.string.recipe_detail_recipe)))
+    recipeDetailBaseLayer.setMarkdown(recipe.baseLayer.toMarkdownOrDefaultText(
+        getString(R.string.recipe_detail_base_layer)))
+    recipeDetailCondiment.setMarkdown(recipe.condiment.toMarkdownOrDefaultText(
+        getString(R.string.recipe_detail_condiment)))
+    recipeDetailMixin.setMarkdown(recipe.mixin.toMarkdownOrDefaultText(
+        getString(R.string.recipe_detail_mixin)))
+    recipeDetailSeasoning.setMarkdown(recipe.seasoning.toMarkdownOrDefaultText(
+        getString(R.string.recipe_detail_seasoning)))
+    recipeDetailShell.setMarkdown(recipe.shell.toMarkdownOrDefaultText(
+        getString(R.string.recipe_detail_shell)))
     recipeDetailCreditText.movementMethod = LinkMovementMethod.getInstance()
     recipeDetailComplimentTheChef.setOnClickListener {
       binding.recipeDetailErrorView.visibility = View.VISIBLE
     }
+  }
+
+  private fun TextView.setMarkdown(markdown: CharSequence) {
+    text = markdown
+    movementMethod = LinkMovementMethod.getInstance()
   }
 
   private fun String?.toMarkdownOrDefaultText(label: String) = if (this != null) {
@@ -139,19 +152,6 @@ class RecipeDetailFragment : Fragment() {
     recipeDetailNotesLabel.visibility = View.GONE
     recipeDetailMadeIt.visibility = View.GONE
     recipeDetailMadeItLabel.visibility = View.GONE
-  }
-
-  private fun getMarkwon(): Lazy<Markwon> {
-    return lazy {
-      Markwon.builder(requireContext())
-          .usePlugin(object : AbstractMarkwonPlugin() {
-            override fun configureTheme(builder: MarkwonTheme.Builder) {
-              builder.linkColor(ContextCompat.getColor(requireContext(),
-                  R.color.colorPrimary))
-            }
-          })
-          .build()
-    }
   }
 
   override fun onPause() {

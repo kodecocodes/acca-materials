@@ -1,6 +1,6 @@
 # Taco Tuesday
 
-This project is the sample project for the RW Android Accessibility book. It is An app for
+This project is the sample project for the RW Android Accessibility book. It is an app for
 discovering recipes for Tuesday.
 
 ## License

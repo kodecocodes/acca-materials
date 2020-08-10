@@ -41,8 +41,8 @@ import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import java.util.concurrent.Executors
 
-@Database(entities = arrayOf(Recipe::class), version = 1, exportSchema = false)
-public abstract class RecipeRoomDatabase : RoomDatabase() {
+@Database(entities = [Recipe::class], version = 1, exportSchema = false)
+abstract class RecipeRoomDatabase : RoomDatabase() {
 
   abstract fun recipeDao(): RecipeDao
 
@@ -51,6 +51,7 @@ public abstract class RecipeRoomDatabase : RoomDatabase() {
     @Volatile
     private var INSTANCE: RecipeRoomDatabase? = null
 
+    @Synchronized
     fun getDatabase(context: Context): RecipeRoomDatabase {
       val tempInstance = INSTANCE
       if (tempInstance != null) {
@@ -76,14 +77,10 @@ public abstract class RecipeRoomDatabase : RoomDatabase() {
       super.onOpen(db)
       INSTANCE?.let { database ->
         Executors.newSingleThreadExecutor().execute {
-          populateDatabase(database.recipeDao())
+          val recipes = DataFactory.recipeData()
+          database.recipeDao().insertAll(recipes)
         }
       }
-    }
-
-    fun populateDatabase(recipeDao: RecipeDao) {
-      val recipes = DataFactory.recipeData()
-      recipeDao.insertAll(recipes)
     }
   }
 }

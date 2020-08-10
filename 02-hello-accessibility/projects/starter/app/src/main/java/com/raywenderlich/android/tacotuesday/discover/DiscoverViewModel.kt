@@ -57,19 +57,22 @@ class DiscoverViewModel @ViewModelInject constructor(
   private val recipe = savedStateHandle.getLiveData<Recipe>(SAVED_STATE_KEY)
   val nextRecipe = recipe
 
-  private var fetchTacoJob: Job? = null
+  private var fetchTacoTimer: Job? = null
 
   fun fetchRandomTaco() {
     // Reset the timer if this is called again through requesting a new recipe
-    fetchTacoJob?.cancel()
+    fetchTacoTimer?.cancel()
 
+    // Fetch a random taco
     viewModelScope.launch(Dispatchers.IO) {
       recipeRepository.randomTacoRecipe()?.let {
         recipe.postValue(it)
       }
     }
 
-    fetchTacoJob = viewModelScope.launch(Dispatchers.IO) {
+    // Set up a timer to fetch a new on in 15 seconds
+    // This will be reset if the user clicks a try it or discard button
+    fetchTacoTimer = viewModelScope.launch(Dispatchers.IO) {
       delay(15000) // 15 seconds
       fetchRandomTaco()
     }

@@ -33,80 +33,80 @@
   -->
 
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginVertical="8dp"
-    app:cardCornerRadius="@dimen/card_radius">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginVertical="@dimen/space_small"
+  app:cardCornerRadius="@dimen/card_radius">
 
   <FrameLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:background="@color/design_default_color_error">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_error">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|center_vertical"
-        android:clickable="false"
-        android:drawablePadding="@dimen/drawable_padding"
-        android:drawableTint="@color/design_default_color_on_primary"
-        android:drawableTop="@drawable/ic_baseline_thumb_down_24"
-        android:focusable="false"
-        android:padding="@dimen/space_normal"
-        android:text="@string/shared_discard"
-        android:textColor="@color/design_default_color_on_primary" />
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end|center_vertical"
+      android:clickable="false"
+      android:drawableTop="@drawable/ic_baseline_thumb_down_24"
+      android:drawablePadding="@dimen/drawable_padding"
+      android:drawableTint="@color/design_default_color_on_primary"
+      android:focusable="false"
+      android:padding="@dimen/space_normal"
+      android:text="@string/shared_discard"
+      android:textColor="@color/design_default_color_on_primary" />
   </FrameLayout>
 
   <androidx.constraintlayout.widget.ConstraintLayout
-      android:id="@+id/item_recipe_card"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?colorPrimary">
+    android:id="@+id/item_recipe_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?colorPrimary">
 
     <CheckBox
-        android:id="@+id/item_recipe_made"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/space_normal"
-        android:text="@string/recipe_detail_made_recipe"
-        android:textColor="?colorOnPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/item_recipe_title" />
+      android:id="@+id/item_recipe_made"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/space_normal"
+      android:text="@string/recipe_detail_made_recipe"
+      android:textColor="?colorOnPrimary"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/item_recipe_title" />
 
     <TextView
-        android:id="@+id/item_recipe_title"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:padding="@dimen/space_normal"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="?colorOnPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@tools:sample/lorem" />
+      android:id="@+id/item_recipe_title"
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:padding="@dimen/space_normal"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      android:textColor="?colorOnPrimary"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="@tools:sample/lorem" />
 
     <ImageView
-        android:id="@+id/item_recipe_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_view_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/item_recipe_rating" />
+      android:id="@+id/item_recipe_details"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_baseline_view_24"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/item_recipe_rating" />
 
     <com.raywenderlich.android.tacotuesday.shared.CustomRatingBar
-        android:id="@+id/item_recipe_rating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:drawableChecked="@drawable/nacho_dip"
-        app:drawableUnchecked="@drawable/nacho"
-        app:editable="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/item_recipe_made" />
+      android:id="@+id/item_recipe_rating"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:drawableChecked="@drawable/nacho_dip"
+      app:drawableUnchecked="@drawable/nacho"
+      app:editable="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/item_recipe_made" />
   </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

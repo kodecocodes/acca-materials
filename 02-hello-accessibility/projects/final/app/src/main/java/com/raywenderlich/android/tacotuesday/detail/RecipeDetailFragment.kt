@@ -122,6 +122,8 @@ class RecipeDetailFragment : Fragment() {
   }
 
   private fun showEditableFields(recipe: Recipe) = with(binding) {
+    recipeDetailTryDiscardButton.contentDescription =
+        getString(R.string.shared_discard)
     recipeDetailTryDiscardButton.setImageDrawable(ResourcesCompat.getDrawable(resources,
         R.drawable.ic_baseline_thumb_down_24, requireContext().theme))
     recipeDetailTryDiscardButton.setOnClickListener {
@@ -141,6 +143,8 @@ class RecipeDetailFragment : Fragment() {
   }
 
   private fun hideEditableFields(recipe: Recipe?) = with(binding) {
+    recipeDetailTryDiscardButton.contentDescription =
+        getString(R.string.shared_try_it)
     recipeDetailTryDiscardButton.setImageDrawable(ResourcesCompat.getDrawable(resources,
         R.drawable.ic_baseline_thumb_up_24, requireContext().theme))
     recipeDetailTryDiscardButton.setOnClickListener {

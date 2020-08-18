@@ -126,17 +126,18 @@
       android:text="@string/recipe_detail_recipe_from_tacofancy"
       android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-    <ImageView
+    <View
       android:id="@+id/recipe_detail_divider"
       android:layout_width="match_parent"
       android:layout_height="1dp"
-      android:src="?colorControlHighlight" />
+      android:background="?colorControlHighlight" />
 
     <ImageView
       android:id="@+id/recipe_detail_try_discard_button"
       style="@style/Widget.MaterialComponents.Button.TextButton"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:contentDescription="@string/shared_try_it"
       android:padding="@dimen/space_normal"
       android:src="@drawable/ic_baseline_thumb_up_24" />
 

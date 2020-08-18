@@ -23,8 +23,8 @@
   <!-- Display Preferences -->
   <string name="preference_dark_mode_title">Use dark mode</string>
   <string name="preference_auto_advance_title">Auto advance recipes</string>
-  <string name="preference_onboarding_title">Show onboarding</string>
-  <string name="preference_onboarding_description">Show onboarding the next time you open the app</string>
+  <string name="preference_onboarding_title">Show on-boarding</string>
+  <string name="preference_onboarding_description">Show on-boarding the next time you open the app</string>
 
   <!-- Help Preferences -->
   <string name="preference_book_forum_title">View book forum</string>

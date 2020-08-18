@@ -127,6 +127,7 @@
       android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
     <ImageView
+      android:id="@+id/recipe_detail_divider"
       android:layout_width="match_parent"
       android:layout_height="1dp"
       android:src="?colorControlHighlight" />

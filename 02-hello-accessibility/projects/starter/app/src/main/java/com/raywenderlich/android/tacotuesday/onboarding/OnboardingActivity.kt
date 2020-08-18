@@ -39,6 +39,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.PreferenceManager
@@ -111,21 +113,26 @@ class OnboardingActivity : FragmentActivity() {
     inner class ViewHolder(val itemBinding: ItemOnboardingBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
 
-      fun bind(data: Pair<Int, Int>) {
-        itemBinding.onboardingImage.setImageResource(data.first)
-        itemBinding.onbardingText.setText(data.second)
+      fun bind(data: OnboardingItem) {
+        itemBinding.onboardingImage.setImageResource(data.imageRes)
+        itemBinding.onbardingText.setText(data.messageRes)
       }
     }
   }
+
+  class OnboardingItem(
+      @DrawableRes val imageRes: Int,
+      @StringRes val messageRes: Int
+  )
 
   companion object {
     private const val NUM_PAGES = 4
 
     private val pages = listOf(
-        Pair(R.drawable.onboarding_try, R.string.onboarding_try_it),
-        Pair(R.drawable.onboarding_discard, R.string.onboarding_discard),
-        Pair(R.drawable.onboarding_list, R.string.onboarding_view_list),
-        Pair(R.drawable.taco_1, R.string.onboarding_taco_tuesday)
+        OnboardingItem(R.drawable.onboarding_try, R.string.onboarding_try_it),
+        OnboardingItem(R.drawable.onboarding_discard, R.string.onboarding_discard),
+        OnboardingItem(R.drawable.onboarding_list, R.string.onboarding_view_list),
+        OnboardingItem(R.drawable.taco_1, R.string.onboarding_taco_tuesday)
     )
 
     fun startActivity(context: Context) {

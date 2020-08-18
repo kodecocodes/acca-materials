@@ -58,9 +58,13 @@
 
   <!-- Onboarding-->
   <string name="onboarding_try_it">Orange to the right, tacos in sight!</string>
+  <string name="onboarding_try_it_description">Screenshot of swiping an orange card to the right</string>
   <string name="onboarding_discard">Orange to the left, move on to the rest.</string>
+  <string name="onboarding_discard_description">Screenshot of swiping an orange card to the left</string>
   <string name="onboarding_view_list">Green is keen to lead the way.</string>
+  <string name="onboarding_view_list_description">Screenshot of a list of green cards</string>
   <string name="onboarding_taco_tuesday">Enjoy your Taco Tuesday!</string>
+  <string name="onboarding_taco_tuesday_description">Person eating a taco</string>
   <string name="onboarding_done">Done</string>
   <string name="onboarding_next">Next</string>
   <string name="onboarding_back">Back</string>

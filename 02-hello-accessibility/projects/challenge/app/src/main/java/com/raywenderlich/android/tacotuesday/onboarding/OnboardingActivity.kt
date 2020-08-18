@@ -114,6 +114,8 @@ class OnboardingActivity : FragmentActivity() {
         RecyclerView.ViewHolder(itemBinding.root) {
 
       fun bind(data: OnboardingItem) {
+        itemBinding.onboardingImage.contentDescription =
+            getString(data.imageDescriptionRes)
         itemBinding.onboardingImage.setImageResource(data.imageRes)
         itemBinding.onbardingText.setText(data.messageRes)
       }
@@ -122,17 +124,34 @@ class OnboardingActivity : FragmentActivity() {
 
   class OnboardingItem(
       @DrawableRes val imageRes: Int,
-      @StringRes val messageRes: Int
+      @StringRes val messageRes: Int,
+      @StringRes val imageDescriptionRes: Int
   )
 
   companion object {
     private const val NUM_PAGES = 4
 
     private val pages = listOf(
-        OnboardingItem(R.drawable.onboarding_try, R.string.onboarding_try_it),
-        OnboardingItem(R.drawable.onboarding_discard, R.string.onboarding_discard),
-        OnboardingItem(R.drawable.onboarding_list, R.string.onboarding_view_list),
-        OnboardingItem(R.drawable.taco_1, R.string.onboarding_taco_tuesday)
+        OnboardingItem(
+            R.drawable.onboarding_try,
+            R.string.onboarding_try_it,
+            R.string.onboarding_try_it_description
+        ),
+        OnboardingItem(
+            R.drawable.onboarding_discard,
+            R.string.onboarding_discard,
+            R.string.onboarding_discard_description
+        ),
+        OnboardingItem(
+            R.drawable.onboarding_list,
+            R.string.onboarding_view_list,
+            R.string.onboarding_view_list_description
+        ),
+        OnboardingItem(
+            R.drawable.taco_1,
+            R.string.onboarding_taco_tuesday,
+            R.string.onboarding_taco_tuesday_description
+        )
     )
 
     fun startActivity(context: Context) {

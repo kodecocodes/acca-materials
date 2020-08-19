@@ -40,8 +40,9 @@
 
   <ImageView
       android:id="@+id/onboarding_image"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintDimensionRatio="2:4"
       app:layout_constraintBottom_toTopOf="@id/onbarding_text"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
@@ -53,8 +54,7 @@
       style="@style/TextAppearance.AppCompat.Medium.Inverse"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:layout_marginEnd="@dimen/space_normal"
-      android:layout_marginStart="@dimen/space_normal"
+      android:layout_margin="@dimen/space_normal"
       android:gravity="center_horizontal"
       android:textStyle="bold"
       app:layout_constraintBottom_toBottomOf="parent"

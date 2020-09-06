@@ -67,6 +67,9 @@ class DiscoverViewModel @ViewModelInject constructor(
     viewModelScope.launch(Dispatchers.IO) {
       recipeRepository.randomTacoRecipe()?.let {
         recipe.postValue(it)
+      } ?: run {
+        delay(2)
+        fetchRandomTaco()
       }
     }
 

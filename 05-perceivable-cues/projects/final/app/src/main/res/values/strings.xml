@@ -57,11 +57,13 @@
   <string name="try_it_discard_confirm_discard">Discard</string>
 
   <!-- Onboarding-->
-  <string name="onboarding_try_it">Orange to the right, tacos in sight!</string>
+  <string name="onboarding_try_it">Swipe the orange recipe card to the right to save it to try later.</string>
   <string name="onboarding_try_it_description">Screenshot of swiping an orange card to the right</string>
-  <string name="onboarding_discard">Orange to the left, move on to the rest.</string>
+  <string name="onboarding_discard">Swipe the orange recipe card to the left to say \"no thank you!\" to a recipe.</string>
   <string name="onboarding_discard_description">Screenshot of swiping an orange card to the left</string>
-  <string name="onboarding_view_list">Green is keen to lead the way.</string>
+  <string name="onboarding_details">Manage your recipes using the \"Try it\" and \"Discard\" buttons on the detail view.</string>
+  <string name="onboarding_details_description">Thumbs-up icon</string>
+  <string name="onboarding_view_list">Then, you can view the list of recipes you want to try.</string>
   <string name="onboarding_view_list_description">Screenshot of a list of green cards</string>
   <string name="onboarding_taco_tuesday">Enjoy your Taco Tuesday!</string>
   <string name="onboarding_taco_tuesday_description">Person eating a taco</string>

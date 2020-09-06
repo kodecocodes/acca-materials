@@ -38,6 +38,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -45,6 +46,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import com.raywenderlich.android.tacotuesday.MainActivity
 import com.raywenderlich.android.tacotuesday.R
 import com.raywenderlich.android.tacotuesday.databinding.ActivityOnboardingBinding
@@ -63,27 +65,44 @@ class OnboardingActivity : FragmentActivity() {
     val pagerAdapter = OnboardingPagerAdapter()
     binding.onboardingPager.adapter = pagerAdapter
 
-    lifecycleScope.launch(Dispatchers.IO) {
-      val options = resources.getStringArray(R.array.pop_up_options)
-      while (isActive) {
-        delay(5000) // 5 seconds
-
-        withContext(Dispatchers.Main) {
-          if (binding.onboardingPager.currentItem == NUM_PAGES - 1) {
-            MainActivity.startActivity(this@OnboardingActivity)
-            this.cancel()
-          } else {
-            binding.onboardingPager.currentItem++
-          }
-        }
-      }
-    }
-
     val sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
     with(sharedPref.edit()) {
       putBoolean("onboarding", false)
       apply()
     }
+
+    binding.onboardingNextButton.setOnClickListener {
+      if (binding.onboardingPager.currentItem == NUM_PAGES - 1) {
+        MainActivity.startActivity(this)
+      } else {
+        binding.onboardingPager.currentItem =
+            binding.onboardingPager.currentItem + 1
+      }
+    }
+
+    binding.onboardingBackButton.setOnClickListener {
+      binding.onboardingPager.currentItem =
+          binding.onboardingPager.currentItem - 1
+    }
+
+    binding.onboardingPager.registerOnPageChangeCallback(object :
+        ViewPager2.OnPageChangeCallback() {
+      override fun onPageSelected(position: Int) {
+        binding.onboardingNextButton.text =
+            if (position == NUM_PAGES - 1) {
+              getString(R.string.onboarding_done)
+            } else {
+              getString(R.string.onboarding_next)
+            }
+        binding.onboardingBackButton.visibility =
+            if (position == 0) {
+              View.GONE
+            } else {
+              View.VISIBLE
+            }
+      }
+    }
+    )
   }
 
   override fun onBackPressed() {
@@ -129,7 +148,7 @@ class OnboardingActivity : FragmentActivity() {
   )
 
   companion object {
-    private const val NUM_PAGES = 4
+    private const val NUM_PAGES = 5
 
     private val pages = listOf(
         OnboardingItem(
@@ -141,6 +160,11 @@ class OnboardingActivity : FragmentActivity() {
             R.drawable.onboarding_discard,
             R.string.onboarding_discard,
             R.string.onboarding_discard_description
+        ),
+        OnboardingItem(
+            R.drawable.onboarding_details,
+            R.string.onboarding_details,
+            R.string.onboarding_details_description
         ),
         OnboardingItem(
             R.drawable.onboarding_list,

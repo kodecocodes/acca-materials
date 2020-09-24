@@ -95,6 +95,9 @@ class TryItRecipesRecyclerViewAdapter(
       binding.itemRecipeDiscard.setOnClickListener {
         onDiscardRecipe(recipe)
       }
+      binding.itemRecipeDiscard.contentDescription =
+          itemView.context.getString(
+              R.string.try_it_description_discard_recipe, recipe.name)
       binding.itemRecipeTitle.setOnLongClickListener {
         MaterialAlertDialogBuilder(it.context)
             .setTitle(R.string.try_it_discard_confirm_title)

@@ -148,7 +148,8 @@ class OnboardingActivity : FragmentActivity() {
   )
 
   companion object {
-    private const val NUM_PAGES = 5
+    private val NUM_PAGES: Int
+      get() = pages.size
 
     private val pages = listOf(
         OnboardingItem(

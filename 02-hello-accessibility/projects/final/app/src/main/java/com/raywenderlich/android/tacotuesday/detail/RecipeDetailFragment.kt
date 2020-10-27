@@ -80,7 +80,7 @@ class RecipeDetailFragment : Fragment() {
       savedInstanceState: Bundle?
   ): View? {
     binding = FragmentRecipeDetailBinding.inflate(layoutInflater, container, false)
-    viewModel.recipe.observe(viewLifecycleOwner, Observer { recipe ->
+    viewModel.recipe.observe(viewLifecycleOwner, { recipe ->
       showRecipeDetails(recipe)
       if (recipe.wantsToTry) {
         showEditableFields(recipe)

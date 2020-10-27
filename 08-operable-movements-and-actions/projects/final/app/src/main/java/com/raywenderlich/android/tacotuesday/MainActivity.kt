@@ -37,17 +37,14 @@ package com.raywenderlich.android.tacotuesday
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager
-import com.raywenderlich.android.tacotuesday.data.RecipeRepository
 import com.raywenderlich.android.tacotuesday.databinding.ActivityMainBinding
 import com.raywenderlich.android.tacotuesday.onboarding.OnboardingActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
-import javax.inject.Inject
 import kotlin.random.Random
 
 @AndroidEntryPoint

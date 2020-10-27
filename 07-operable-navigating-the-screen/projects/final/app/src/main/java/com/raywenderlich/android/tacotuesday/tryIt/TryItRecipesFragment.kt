@@ -71,7 +71,7 @@ class TryItRecipesFragment : Fragment() {
         .attachToRecyclerView(binding.root)
 
     with(viewModel) {
-      savedRecipes.observe(viewLifecycleOwner, Observer {
+      savedRecipes.observe(viewLifecycleOwner, {
         (binding.root.adapter as TryItRecipesRecyclerViewAdapter).submitList(it)
       })
     }

@@ -102,7 +102,7 @@ class DiscoverFragment : Fragment() {
       }
     }
     with(viewModel) {
-      nextRecipe.observe(viewLifecycleOwner, Observer { showRecipe(it) })
+      nextRecipe.observe(viewLifecycleOwner, { showRecipe(it) })
       viewModel.fetchRandomTaco()
     }
     return binding.root

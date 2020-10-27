@@ -121,9 +121,6 @@ class DiscoverFragmentTest {
 
   private fun launchFragment() {
     ActivityScenario.launch(MainActivity::class.java)
-
-    Espresso.onView(ViewMatchers.withText("Close"))
-        .perform(ViewActions.click())
   }
 
   @Module

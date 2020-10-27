@@ -50,14 +50,14 @@
       android:layout_height="wrap_content"
       android:layout_gravity="end|center_vertical"
       android:clickable="false"
-      android:drawableTop="@drawable/ic_baseline_thumb_down_24"
       android:drawablePadding="@dimen/drawable_padding"
-      android:drawableTint="@color/design_default_color_on_primary"
       android:focusable="false"
       android:importantForAccessibility="no"
       android:padding="@dimen/space_normal"
       android:text="@string/shared_discard"
-      android:textColor="@color/design_default_color_on_primary" />
+      android:textColor="@color/design_default_color_on_primary"
+      app:drawableTint="@color/design_default_color_on_primary"
+      app:drawableTopCompat="@drawable/ic_baseline_thumb_down_24" />
   </FrameLayout>
 
   <androidx.constraintlayout.widget.ConstraintLayout

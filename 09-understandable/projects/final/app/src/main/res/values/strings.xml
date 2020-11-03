@@ -6,7 +6,7 @@
   <string name="shared_discard">Discard</string>
   <string name="shared_details">Details</string>
   <string name="shared_dismiss">Dismiss</string>
-  <string name="shared_generic_error_message">Taco-bout a mess! We ran into an error when trying to do that</string>
+  <string name="shared_generic_error_message">Taco-bout a mess! We ran into an error when trying to do that. Please try again in a few minutes.</string>
 
   <!-- Rating bar-->
   <string name="custom_rating_bar_description">%s rating %d of 5</string>
@@ -91,6 +91,29 @@
     <item>Taco chance on that recipe you\'re not sure about. You might end up loving it!</item>
     <item>Do you have the best taco pun? Share it with us on our forum!</item>
     <item>Taco Throw Back Thursday time! What is the best taco recipe you\'ve ever made?</item>
+    <item>Ready for Taco Tuesday? How about you use one of our tried and true recipes.</item>
+  </string-array>
+
+  <string-array name="pop_up_alternates">
+    <item>Are you enjoying the app? Rate it now in the Play Store!</item>
+    <item>Victoria just tried a new recipe. What recipe are you trying this week?</item>
+    <item>Jenn rated her favorite recipe 1 minute ago. Why don\'t you help others by rating yours?</item>
+    <item>Ellen made tacos on Tuesday 5 weeks in a row. Beat her streak!</item>
+    <item>Gabriella created her own taco recipe. Congratulate her!</item>
+    <item>How are you liking this app? Let\'s talk about it. Answer this five minute survey!</item>
+    <item>Let us help you find your next Taco Tuesday recipe! Swipe right on your next find.</item>
+    <item>Did you find a recipe you dislike? Not your type of taco? Leave a rating on the details screen.</item>
+    <item>Sorry to be all up in your grill. Do you mind taking a second to rate the app?</item>
+    <item>Spectacular! You saved your first recipe. Ready to get cooking?</item>
+    <item>Having issues with the app? We can talk over the phone. Contact support now.</item>
+    <item>Shop for tortillas and other ingredients now so you\'re not caught without them</item>
+    <item>Are you hungry? Try one of our delicious taco recipes!</item>
+    <item>Have some feedback? You can tell us. We won\'t tell anyone.</item>
+    <item>Try tacos on a day other than Tuesday. Tacos every day!</item>
+    <item>Let\'s not waste time. You\'re our favorite customer!</item>
+    <item>Take a chance on that recipe you\'re not sure about. You might end up loving it!</item>
+    <item>Do you have the best taco pun? Share it with us on our forum!</item>
+    <item>Taco Throw Back Thursday time! Share the best taco recipe you\'ve ever made?</item>
     <item>Ready for Taco Tuesday? How about you use one of our tried and true recipes.</item>
   </string-array>
 </resources>

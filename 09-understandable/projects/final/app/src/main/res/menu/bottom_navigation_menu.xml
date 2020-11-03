@@ -37,15 +37,15 @@
     android:id="@+id/item_discover"
     android:enabled="true"
     android:icon="@drawable/ic_baseline_search_24"
-    android:title="Discover" />
+    android:title="@string/bottom_bar_discover" />
   <item
       android:id="@+id/item_try_it"
       android:enabled="true"
       android:icon="@drawable/ic_baseline_thumb_up_24"
-      android:title="Favorites" />
+      android:title="@string/bottom_bar_try_it" />
   <item
       android:id="@+id/item_settings"
       android:enabled="true"
       android:icon="@drawable/ic_baseline_settings_24"
-      android:title="Settings" />
+      android:title="@string/bottom_bar_settings" />
 </menu>

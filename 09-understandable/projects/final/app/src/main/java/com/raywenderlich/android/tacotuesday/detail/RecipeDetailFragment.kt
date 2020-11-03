@@ -50,6 +50,7 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -144,6 +145,8 @@ class RecipeDetailFragment : Fragment() {
           Intent.ACTION_VIEW,
           Uri.parse("https://github.com/sinker/tacofancy")))
     }
+    recipeDetailErrorView.accessibilityLiveRegion =
+        ViewCompat.ACCESSIBILITY_LIVE_REGION_POLITE
     recipeDetailComplimentTheChef.setOnClickListener {
       binding.recipeDetailErrorView.visibility = View.VISIBLE
     }
@@ -176,7 +179,6 @@ class RecipeDetailFragment : Fragment() {
     recipeSpiceRating.rating = recipe.spiceRating ?: 0
     recipeDetailNotesEditText.setText(recipe.notes)
     recipeDetailMadeIt.isChecked = recipe.hasMade
-    recipeDetailMadeIt.setOnCheckedChangeListener { _, _ -> activity?.onBackPressed() }
     recipeNachoRatingContainer.visibility = View.VISIBLE
     recipeSpiceRatingContainer.visibility = View.VISIBLE
     recipeDetailNotesInputLayout.visibility = View.VISIBLE

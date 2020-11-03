@@ -37,6 +37,7 @@ package com.raywenderlich.android.tacotuesday
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
@@ -87,8 +88,16 @@ class MainActivity : AppCompatActivity() {
       val options = resources.getStringArray(R.array.pop_up_options)
       while (isActive) {
         withContext(Dispatchers.Main) {
-          val randomMessage = options[Random.nextInt(options.size - 1)]
+          val randomIndex = Random.nextInt(options.size - 1)
+          val randomMessage = options[randomIndex]
           binding.mainBanner.text = randomMessage
+          binding.mainBanner.setOnClickListener {
+            AlertDialog.Builder(this@MainActivity)
+                .setMessage(resources
+                    .getStringArray(R.array.pop_up_alternates)[randomIndex])
+                .setPositiveButton(R.string.shared_dismiss, null)
+                .show()
+          }
         }
 
         delay(60000) // 60 seconds

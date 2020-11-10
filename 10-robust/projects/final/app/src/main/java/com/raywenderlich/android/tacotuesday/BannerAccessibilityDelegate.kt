@@ -9,9 +9,8 @@ class BannerAccessibilityDelegate :
 
   override fun onInitializeAccessibilityNodeInfo(
       host: View?,
-      info: AccessibilityNodeInfoCompat?
-  ) {
+      info: AccessibilityNodeInfoCompat? ){
     super.onInitializeAccessibilityNodeInfo(host, info)
-    info?.roleDescription = "banner"
+    info?.roleDescription = context.getString(R.string.banner_role)
   }
 }

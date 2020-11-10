@@ -36,12 +36,17 @@ package com.raywenderlich.android.tacotuesday.shared
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Rect
+import android.os.Bundle
 import android.util.AttributeSet
+import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
 import androidx.annotation.DrawableRes
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.content.res.getResourceIdOrThrow
+import androidx.core.view.ViewCompat
+import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
+import androidx.customview.widget.ExploreByTouchHelper
 import com.raywenderlich.android.tacotuesday.R
 
 
@@ -62,6 +67,8 @@ class CustomRatingBar @JvmOverloads constructor(
     set(value) {
       field = value
       invalidate()
+      contentDescription = context.getString(
+          R.string.current_rating_description, value)
     }
   private val screenDensity = context.resources.displayMetrics.density
   private val diameter = (iconSizeDp * screenDensity).toInt()
@@ -74,6 +81,8 @@ class CustomRatingBar @JvmOverloads constructor(
     val y = paddingTop + yFactor * (diameter + spacingWidth)
     Rect(x, y, x + diameter, y + diameter)
   }
+  private val exploreByTouchHelper =
+      CustomRatingBarExploreByTouchHelper(this)
 
   init {
     context.theme.obtainStyledAttributes(
@@ -92,6 +101,31 @@ class CustomRatingBar @JvmOverloads constructor(
     }
     isFocusable = true
     invalidate()
+    ViewCompat.setAccessibilityDelegate(this, exploreByTouchHelper)
+    accessibilityLiveRegion = ACCESSIBILITY_LIVE_REGION_POLITE
+  }
+
+  override fun dispatchHoverEvent(event: MotionEvent?): Boolean {
+    return (event?.let {
+      exploreByTouchHelper.dispatchHoverEvent(it)
+    } ?: run { false }
+        || super.dispatchHoverEvent(event))
+  }
+  override fun dispatchKeyEvent(event: KeyEvent?): Boolean {
+    return (event?.let {
+      exploreByTouchHelper.dispatchKeyEvent(it)
+    } ?: run { false }
+        || super.dispatchKeyEvent(event))
+  }
+  override fun onFocusChanged(
+      gainFocus: Boolean,
+      direction: Int,
+      previouslyFocusedRect: Rect?
+  ){
+    super.onFocusChanged(gainFocus, direction,
+        previouslyFocusedRect)
+    exploreByTouchHelper.onFocusChanged(gainFocus, direction,
+        previouslyFocusedRect)
   }
 
   override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -116,20 +150,6 @@ class CustomRatingBar @JvmOverloads constructor(
     }
   }
 
-  override fun onTouchEvent(event: MotionEvent): Boolean {
-    if (editable) {
-      when (event.action) {
-        MotionEvent.ACTION_DOWN -> return true
-        MotionEvent.ACTION_UP -> {
-          val selectedIndex = findRatingAtPoint(event.x, event.y)
-          onSelected(selectedIndex)
-          return true
-        }
-      }
-    }
-    return super.onTouchEvent(event)
-  }
-
   protected fun onSelected(selectedIndex: Int) {
     if (selectedIndex == INVALID_VALUE) return
     rating = selectedIndex + 1
@@ -151,5 +171,47 @@ class CustomRatingBar @JvmOverloads constructor(
     const val INVALID_VALUE = -1
     const val spacingWidthDp = 10f
     const val iconSizeDp = 48f
+  }
+
+  inner class CustomRatingBarExploreByTouchHelper(host: View) :
+      ExploreByTouchHelper(host) {
+
+    override fun getVisibleVirtualViews(
+        virtualViewIds: MutableList<Int>?) {
+      rectangles.forEachIndexed { index, _ ->
+        virtualViewIds?.add(index)
+      }
+    }
+
+    override fun getVirtualViewAt(x: Float, y: Float): Int {
+      val index = findRatingAtPoint(x, y)
+      return if (index == INVALID_VALUE) INVALID_ID else index
+    }
+
+    override fun onPopulateNodeForVirtualView(
+        virtualViewId: Int,
+        node: AccessibilityNodeInfoCompat) {
+      node.text = context.getString(
+          R.string.custom_rating_bar_description,
+          label,
+          virtualViewId + 1
+      )
+      node.addAction(AccessibilityNodeInfoCompat
+          .AccessibilityActionCompat.ACTION_CLICK)
+      node.setBoundsInParent(rectangles[virtualViewId])
+    }
+
+    override fun onPerformActionForVirtualView(
+        virtualViewId: Int,
+        action: Int,
+        arguments: Bundle?
+    ): Boolean {
+      when (action) {
+        AccessibilityNodeInfoCompat.ACTION_CLICK -> {
+          onSelected(virtualViewId)
+          return true
+        } }
+      return false
+    }
   }
 }

@@ -78,8 +78,10 @@ class DiscoverViewModel @ViewModelInject constructor(
     // Set up a timer to fetch a new on in 15 seconds
     // This will be reset if the user clicks a try it or discard button
     if (sharedPreferences.getBoolean("auto_advance", false)) {
+      val seconds = sharedPreferences.getString("time_length", "15")
+          ?.toIntOrNull() ?: 15
       fetchTacoTimer = viewModelScope.launch(Dispatchers.IO) {
-        delay(15000) // 15 seconds
+        delay(seconds * 1000L)
         fetchRandomTaco()
       }
     }

@@ -35,15 +35,25 @@
 package com.raywenderlich.android.tacotuesday
 
 import android.app.Application
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatDelegate
 import dagger.hilt.android.HiltAndroidApp
+import javax.inject.Inject
 
 @HiltAndroidApp
 open class TacoTuesdayApp : Application() {
 
+  @Inject
+  lateinit var sharedPreferences: SharedPreferences
+
   override fun onCreate() {
     super.onCreate()
     AppCompatDelegate.setDefaultNightMode(
-        AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        if (sharedPreferences.getBoolean("dark_mode", false)) {
+          AppCompatDelegate.MODE_NIGHT_YES
+        } else {
+          AppCompatDelegate.MODE_NIGHT_NO
+        }
+    )
   }
 }

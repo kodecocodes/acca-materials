@@ -24,6 +24,7 @@
   <!-- Display Preferences -->
   <string name="preference_dark_mode_title">Use dark mode</string>
   <string name="preference_auto_advance_title">Auto advance recipes</string>
+  <string name="preference_seconds_title">Seconds for auto advance</string>
   <string name="preference_onboarding_title">Show on-boarding</string>
   <string name="preference_onboarding_description">Show on-boarding the next time you open the app</string>
 
@@ -46,6 +47,8 @@
   <string name="recipe_detail_default_text">No %s content</string>
   <string name="recipe_detail_nacho_label">Nacho</string>
   <string name="recipe_detail_spice_label">Spice</string>
+
+  <string name="recipe_detail_save">Details will be saved when exiting the recipe.</string>
 
   <!-- Try It-->
   <string name="try_it_description_discard_recipe">Discard %s</string>
@@ -118,4 +121,13 @@
     <item>Taco Throw Back Thursday time! Share the best taco recipe you\'ve ever made?</item>
     <item>Ready for Taco Tuesday? How about you use one of our tried and true recipes.</item>
   </string-array>
+
+  <string-array name="time_options">
+    <item>10</item>
+    <item>15</item>
+    <item>20</item>
+    <item>30</item>
+    <item>50</item>
+  </string-array>
+
 </resources>

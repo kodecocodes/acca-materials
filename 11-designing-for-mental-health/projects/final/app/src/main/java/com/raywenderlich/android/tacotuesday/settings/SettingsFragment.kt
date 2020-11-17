@@ -35,12 +35,28 @@
 package com.raywenderlich.android.tacotuesday.settings
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.SwitchPreferenceCompat
 import com.raywenderlich.android.tacotuesday.R
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     setPreferencesFromResource(R.xml.root_preferences, rootKey)
+
+    findPreference<SwitchPreferenceCompat>("dark_mode")
+        ?.onPreferenceChangeListener =
+        Preference.OnPreferenceChangeListener { _, newValue ->
+          AppCompatDelegate.setDefaultNightMode(
+              if (newValue == true) {
+                AppCompatDelegate.MODE_NIGHT_YES
+              } else {
+                AppCompatDelegate.MODE_NIGHT_NO
+              }
+          )
+          true
+        }
   }
 }

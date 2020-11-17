@@ -1,0 +1,119 @@
+<resources>
+  <string name="app_name">Martes de Tacos</string>
+
+  <!-- Shared strings-->
+  <string name="shared_try_it">Inténtalo</string>
+  <string name="shared_discard">Descartar</string>
+  <string name="shared_details">Detalles</string>
+  <string name="shared_dismiss">Descartar</string>
+  <string name="shared_generic_error_message">¡Ups! Tuvimos un error intentando hacer eso</string>
+
+  <!-- Rating bar-->
+  <string name="custom_rating_bar_description">%s calificando %d de 5</string>
+
+  <!-- Bottom bar labels -->
+  <string name="bottom_bar_discover">Descubrir</string>
+  <string name="bottom_bar_try_it">@string/shared_try_it</string>
+  <string name="bottom_bar_settings">Configuración</string>
+
+  <!-- Preference Titles -->
+  <string name="display_header">Pantalla</string>
+  <string name="help_header">Ayuda</string>
+
+  <!-- Display Preferences -->
+  <string name="preference_dark_mode_title">Usar modo oscuro</string>
+  <string name="preference_auto_advance_title">Avanzar recetas automáticamente</string>
+  <string name="preference_onboarding_title">Mostrar inducción</string>
+  <string name="preference_onboarding_description">Mostrar inducción la próxima vez que abras el app</string>
+
+  <!-- Help Preferences -->
+  <string name="preference_book_forum_title">Ver foro del libro</string>
+
+  <!-- Details strings-->
+  <string name="recipe_detail_made_recipe">Receta hecha</string>
+  <string name="recipe_detail_hint_notes">Notas</string>
+  <string name="recipe_detail_recipe_from_tacofancy">Receta de TacoFancy</string>
+  <string name="recipe_detail_compliment_the_chef">Felicitar al chef</string>
+  <string name="recipe_detail_recipe">Receta</string>
+  <string name="recipe_detail_base_layer">Capa Base</string>
+  <string name="recipe_detail_condiment">Condimento</string>
+  <string name="recipe_detail_mixin">Mezcla</string>
+  <string name="recipe_detail_seasoning">Sazonado</string>
+  <string name="recipe_detail_shell">Tortilla</string>
+  <string name="recipe_detail_nacho_rating">Calificación de nacho</string>
+  <string name="recipe_detail_spice_rating">Calificación de picante</string>
+  <string name="recipe_detail_default_text">No hay contenido para: %s</string>
+  <string name="recipe_detail_nacho_label">Nacho</string>
+  <string name="recipe_detail_spice_label">Picante</string>
+
+  <!-- Try It-->
+  <string name="try_it_description_discard_recipe">Descartar %s</string>
+  <string name="try_it_description_details_recipe">Detalle de %s</string>
+  <string name="try_it_description_made_recipe">Hice %s</string>
+  <string name="try_it_description_rating">Calificación %d de 5 para %s</string>
+  <string name="try_it_discard_confirm_title">¿Descartar receta?</string>
+  <string name="try_it_discard_confirm_message">¿Deseas eliminar %s?</string>
+  <string name="try_it_discard_confirm_cancel">Cancelar</string>
+  <string name="try_it_discard_confirm_discard">Descartar</string>
+
+  <!-- Onboarding-->
+  <string name="onboarding_try_it">Desliza la tarjeta de la receta naranja hacia la derecha para guardar e intentarla más tarde.</string>
+  <string name="onboarding_try_it_description">Captura de pantalla de una tarjeta naranja deslizándose hacia la derecha</string>
+  <string name="onboarding_discard">Desliza la tarjeta de la receta naranja hacia la izquierda para decir \"¡No gracias!\" a una receta.</string>
+  <string name="onboarding_discard_description">Captura de pantalla de una tarjeta naranja deslizándose hacia la izquierda</string>
+  <string name="onboarding_details">Administra tus recetas usando los botones \"Inténtalo\" y \"Descartar\" en la pantalla de detalle.</string>
+  <string name="onboarding_details_description">Icono de pulgar hacia arriba</string>
+  <string name="onboarding_view_list">Luego, podrás ver la lista de recetas que quieras intentar.</string>
+  <string name="onboarding_view_list_description">Captura de pantalla de una lista de tarjetas verdes</string>
+  <string name="onboarding_taco_tuesday">¡Disfruta tu Martes de Tacos!</string>
+  <string name="onboarding_taco_tuesday_description">Persona comiendo un taco</string>
+  <string name="onboarding_done">Listo</string>
+  <string name="onboarding_next">Siguiente</string>
+  <string name="onboarding_back">Atrás</string>
+
+  <string-array name="pop_up_options">
+    <item>¿Estás difrutando el app? ¡Califícala en el Play Store!</item>
+    <item>Victoria acaba de intentar una nueva receta. ¿Qué receta intentarás esta semana?</item>
+    <item>Jenn calificó su receta favorita hace 1 minuto. ¿Por qué no ayudás a otros calificando la tuya?</item>
+    <item>Ellen hizo tacos el martes por 5 semanas seguidas. ¡Bate su racha!</item>
+    <item>Gabriella creó su propia receta de tacos. ¡Felicítala!</item>
+    <item>¿Estás difrutando el app? ¡Responde esta encuesta de cinco minutos!</item>
+    <item>¡Vamos a ayudarte a buscar tu próxima receta Martes de Taco! Desliza hacia la derecha en tu próximo hallazgo.</item>
+    <item>¿Encontraste una receta que no te gusta? ¿Taco tipo nacho? Deja una calificación en la pantalla de detalles.</item>
+    <item>¿Te importaría tomarte un segundo para calificar el app?</item>
+    <item>¡Es-pec-taco-lar! Guardaste tu primer receta. ¿Listo para cocinar?</item>
+    <item>¿Tienes problemas con el app? Contacta a soporte ahora.</item>
+    <item>Compra tortillas y otros ingredientes ahora</item>
+    <item>¡Prueba una de nuestras recetas deliciosas de tacos!</item>
+    <item>¿Tienes feedback? Nos puedes contar.</item>
+    <item>¡Sazona el día! Prueba tacos en un día distinto al Martes. ¡Tacos todos los días!</item>
+    <item>¡Eres nuestro cliente favorito!</item>
+    <item>Dale una chance a la receta de la que no estás seguro. ¡Puede que te encante!</item>
+    <item>¿Tienes un chiste acerca de tacos? ¡Compártelo con nosotros en nuestro foro!</item>
+    <item>¿Cuál es la mejor receta de Taco que has realizado?</item>
+    <item>¿Listo para Martes de Taco? ¿Qué me dices de intentar una de nuestras recetas verdaderas?</item>
+  </string-array>
+
+  <string-array name="pop_up_alternates">
+    <item>¿Estás difrutando el app? ¡Califícala en el Play Store!</item>
+    <item>Victoria acaba de intentar una nueva receta. ¿Qué receta intentarás esta semana?</item>
+    <item>Jenn calificó su receta favorita hace 1 minuto. ¿Por qué no ayudás a otros calificando la tuya?</item>
+    <item>Ellen hizo tacos el martes por 5 semanas seguidas. ¡Bate su racha!</item>
+    <item>Gabriella creó su propia receta de tacos. ¡Felicítala!</item>
+    <item>¿Estás difrutando el app? ¡Responde esta encuesta de cinco minutos!</item>
+    <item>¡Vamos a ayudarte a buscar tu próxima receta Martes de Taco! Desliza hacia la derecha en tu próximo hallazgo.</item>
+    <item>¿Encontraste una receta que no te gusta? ¿Taco tipo nacho? Deja una calificación en la pantalla de detalles.</item>
+    <item>¿Te importaría tomarte un segundo para calificar el app?</item>
+    <item>¡Es-pec-taco-lar! Guardaste tu primer receta. ¿Listo para cocinar?</item>
+    <item>¿Tienes problemas con el app? Contacta a soporte ahora.</item>
+    <item>Compra tortillas y otros ingredientes ahora</item>
+    <item>¡Prueba una de nuestras recetas deliciosas de tacos!</item>
+    <item>¿Tienes feedback? Nos puedes contar.</item>
+    <item>¡Sazona el día! Prueba tacos en un día distinto al Martes. ¡Tacos todos los días!</item>
+    <item>¡Eres nuestro cliente favorito!</item>
+    <item>Dale una chance a la receta de la que no estás seguro. ¡Puede que te encante!</item>
+    <item>¿Tienes un chiste acerca de tacos? ¡Compártelo con nosotros en nuestro foro!</item>
+    <item>¿Cuál es la mejor receta de Taco que has realizado?</item>
+    <item>¿Listo para Martes de Taco? ¿Qué me dices de intentar una de nuestras recetas verdaderas?</item>
+  </string-array>
+</resources>

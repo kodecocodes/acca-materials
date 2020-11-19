@@ -4,13 +4,12 @@ import android.view.View
 import androidx.core.view.AccessibilityDelegateCompat
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 
-class BannerAccessibilityDelegate :
-    AccessibilityDelegateCompat() {
+class BannerAccessibilityDelegate : AccessibilityDelegateCompat() {
 
   override fun onInitializeAccessibilityNodeInfo(
       host: View?,
       info: AccessibilityNodeInfoCompat? ){
     super.onInitializeAccessibilityNodeInfo(host, info)
-    info?.roleDescription = context.getString(R.string.banner_role)
+    info?.roleDescription = host?.context?.getString(R.string.banner_role)
   }
 }

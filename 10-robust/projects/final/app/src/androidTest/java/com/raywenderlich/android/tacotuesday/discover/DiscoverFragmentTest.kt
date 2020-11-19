@@ -38,7 +38,6 @@ import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.accessibility.AccessibilityChecks
 import androidx.test.espresso.action.ViewActions
-import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import com.google.android.apps.common.testing.accessibility.framework.AccessibilityCheckResultUtils.matchesViews
 import com.nhaarman.mockitokotlin2.*
@@ -100,7 +99,7 @@ class DiscoverFragmentTest {
     runBlocking {
       launchFragment()
 
-      Espresso.onView(ViewMatchers.withId(R.id.discover_recipe_card))
+      Espresso.onView(withId(R.id.discover_recipe_card))
           .perform(ViewActions.swipeRight())
 
       verify(repository, times(2)).randomTacoRecipe()
@@ -112,7 +111,7 @@ class DiscoverFragmentTest {
     runBlocking {
       launchFragment()
 
-      Espresso.onView(ViewMatchers.withId(R.id.discover_recipe_card))
+      Espresso.onView(withId(R.id.discover_recipe_card))
           .perform(ViewActions.swipeLeft())
 
       verify(repository, times(2)).randomTacoRecipe()

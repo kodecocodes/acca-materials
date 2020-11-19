@@ -43,7 +43,6 @@ import android.view.ViewGroup
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.lifecycleScope
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
@@ -51,7 +50,6 @@ import com.raywenderlich.android.tacotuesday.MainActivity
 import com.raywenderlich.android.tacotuesday.R
 import com.raywenderlich.android.tacotuesday.databinding.ActivityOnboardingBinding
 import com.raywenderlich.android.tacotuesday.databinding.ItemOnboardingBinding
-import kotlinx.coroutines.*
 
 class OnboardingActivity : FragmentActivity() {
 

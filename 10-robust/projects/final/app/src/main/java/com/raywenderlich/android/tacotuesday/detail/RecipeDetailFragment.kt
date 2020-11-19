@@ -35,7 +35,6 @@
 package com.raywenderlich.android.tacotuesday.detail
 
 import android.content.Intent
-import android.graphics.Rect
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -43,7 +42,6 @@ import android.text.method.LinkMovementMethod
 import android.text.style.ForegroundColorSpan
 import android.text.style.TtsSpan
 import android.view.LayoutInflater
-import android.view.TouchDelegate
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -53,7 +51,6 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.lifecycle.viewModelScope
 import com.raywenderlich.android.tacotuesday.R
 import com.raywenderlich.android.tacotuesday.data.Recipe
@@ -61,7 +58,6 @@ import com.raywenderlich.android.tacotuesday.databinding.FragmentRecipeDetailBin
 import dagger.hilt.android.AndroidEntryPoint
 import io.noties.markwon.*
 import io.noties.markwon.core.CoreProps
-import io.noties.markwon.core.MarkwonTheme
 import io.noties.markwon.core.factory.LinkSpanFactory
 import io.noties.markwon.core.spans.LinkSpan
 import org.commonmark.node.Link
@@ -73,41 +69,39 @@ class RecipeDetailFragment : Fragment() {
   private val viewModel: RecipeDetailViewModel by viewModels()
   private val markwon by getMarkwon()
 
-  private fun getMarkwon(): Lazy<Markwon> {
-    return lazy {
-      Markwon.builder(requireContext())
-          .usePlugin(object : AbstractMarkwonPlugin() {
-            override fun configureSpansFactory(
-                builder: MarkwonSpansFactory.Builder) {
-              super.configureSpansFactory(
-                  builder.setFactory(Link::class.java,
-                      object : LinkSpanFactory() {
-                        @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-                        override fun getSpans(
-                            configuration: MarkwonConfiguration,
-                            props: RenderProps
-                        ): Any? {
-                          val href = CoreProps.LINK_DESTINATION.require(props)
-                          val uri = Uri.parse(href)
-                          return arrayOf<Any>(
-                              LinkSpan(configuration.theme(), href,
-                                  configuration.linkResolver()),
-                              ForegroundColorSpan(ContextCompat.getColor(requireContext(),
-                                  R.color.colorPrimary)),
-                              TtsSpan.ElectronicBuilder()
-                                  .setPort(uri.port)
-                                  .setDomain(uri.host)
-                                  .setPath(uri.path)
-                                  .setQueryString(uri.query)
-                                  .build()
-                          )
-                        }
-                      })
-              )
-            }
-          })
-          .build()
-    }
+  private fun getMarkwon(): Lazy<Markwon> = lazy {
+    Markwon.builder(requireContext())
+        .usePlugin(object : AbstractMarkwonPlugin() {
+          override fun configureSpansFactory(
+              builder: MarkwonSpansFactory.Builder) {
+            super.configureSpansFactory(
+                builder.setFactory(Link::class.java,
+                    object : LinkSpanFactory() {
+                      @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+                      override fun getSpans(
+                          configuration: MarkwonConfiguration,
+                          props: RenderProps
+                      ): Any? {
+                        val href = CoreProps.LINK_DESTINATION.require(props)
+                        val uri = Uri.parse(href)
+                        return arrayOf<Any>(
+                            LinkSpan(configuration.theme(), href,
+                                configuration.linkResolver()),
+                            ForegroundColorSpan(ContextCompat.getColor(requireContext(),
+                                R.color.colorPrimary)),
+                            TtsSpan.ElectronicBuilder()
+                                .setPort(uri.port)
+                                .setDomain(uri.host)
+                                .setPath(uri.path)
+                                .setQueryString(uri.query)
+                                .build()
+                        )
+                      }
+                    })
+            )
+          }
+        })
+        .build()
   }
 
   override fun onCreateView(

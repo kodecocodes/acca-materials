@@ -49,7 +49,6 @@ import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import androidx.customview.widget.ExploreByTouchHelper
 import com.raywenderlich.android.tacotuesday.R
 
-
 class CustomRatingBar @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -81,8 +80,7 @@ class CustomRatingBar @JvmOverloads constructor(
     val y = paddingTop + yFactor * (diameter + spacingWidth)
     Rect(x, y, x + diameter, y + diameter)
   }
-  private val exploreByTouchHelper =
-      CustomRatingBarExploreByTouchHelper(this)
+  private val exploreByTouchHelper = CustomRatingBarExploreByTouchHelper(this)
 
   init {
     context.theme.obtainStyledAttributes(

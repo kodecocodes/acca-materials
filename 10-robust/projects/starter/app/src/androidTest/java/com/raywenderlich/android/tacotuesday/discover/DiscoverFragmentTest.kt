@@ -100,7 +100,7 @@ class DiscoverFragmentTest {
     runBlocking {
       launchFragment()
 
-      Espresso.onView(ViewMatchers.withId(R.id.discover_recipe_card))
+      Espresso.onView(withId(R.id.discover_recipe_card))
           .perform(ViewActions.swipeRight())
 
       verify(repository, times(2)).randomTacoRecipe()
@@ -112,7 +112,7 @@ class DiscoverFragmentTest {
     runBlocking {
       launchFragment()
 
-      Espresso.onView(ViewMatchers.withId(R.id.discover_recipe_card))
+      Espresso.onView(withId(R.id.discover_recipe_card))
           .perform(ViewActions.swipeLeft())
 
       verify(repository, times(2)).randomTacoRecipe()

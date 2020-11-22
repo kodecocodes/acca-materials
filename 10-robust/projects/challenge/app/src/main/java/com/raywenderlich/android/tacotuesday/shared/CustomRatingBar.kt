@@ -152,6 +152,20 @@ class CustomRatingBar @JvmOverloads constructor(
     }
   }
 
+  override fun onTouchEvent(event: MotionEvent): Boolean {
+    if (editable) {
+      when (event.action) {
+        MotionEvent.ACTION_DOWN -> return true
+        MotionEvent.ACTION_UP -> {
+          val selectedIndex = findRatingAtPoint(event.x, event.y)
+          onSelected(selectedIndex)
+          return true
+        }
+      }
+    }
+    return super.onTouchEvent(event)
+  }
+
   protected fun onSelected(selectedIndex: Int) {
     if (selectedIndex == INVALID_VALUE) return
     rating = selectedIndex + 1

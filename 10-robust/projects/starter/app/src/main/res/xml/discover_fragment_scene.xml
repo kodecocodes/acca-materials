@@ -117,7 +117,7 @@
       app:dragDirection="dragLeft"
       app:onTouchUp="autoComplete"
       app:touchAnchorSide="left"
-      app:touchRegionId="@id/discover_recipe_card" />
+      app:touchRegionId="@id/discovery_card_recipe_description" />
 
   </Transition>
 
@@ -140,7 +140,7 @@
       app:dragDirection="dragRight"
       app:onTouchUp="autoComplete"
       app:touchAnchorSide="right"
-      app:touchRegionId="@id/discover_recipe_card" />
+      app:touchRegionId="@id/discovery_card_recipe_description" />
 
   </Transition>
 

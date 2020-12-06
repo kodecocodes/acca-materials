@@ -1,0 +1,94 @@
+<resources>
+  <string name="app_name">Taco Tuesday</string>
+
+  <!-- Shared strings-->
+  <string name="shared_try_it">Try it</string>
+  <string name="shared_discard">Discard</string>
+  <string name="shared_details">Details</string>
+  <string name="shared_dismiss">Dismiss</string>
+  <string name="shared_generic_error_message">Taco-bout a mess! We ran into an error when trying to do that</string>
+
+  <!-- Rating bar-->
+  <string name="custom_rating_bar_description">%s rating %d of 5</string>
+
+  <!-- Bottom bar labels -->
+  <string name="bottom_bar_discover">Discover</string>
+  <string name="bottom_bar_try_it">@string/shared_try_it</string>
+  <string name="bottom_bar_settings">Settings</string>
+
+  <!-- Preference Titles -->
+  <string name="display_header">Display</string>
+  <string name="help_header">Help</string>
+
+  <!-- Display Preferences -->
+  <string name="preference_dark_mode_title">Use dark mode</string>
+  <string name="preference_auto_advance_title">Auto advance recipes</string>
+  <string name="preference_onboarding_title">Show on-boarding</string>
+  <string name="preference_onboarding_description">Show on-boarding the next time you open the app</string>
+
+  <!-- Help Preferences -->
+  <string name="preference_book_forum_title">View book forum</string>
+
+  <!-- Details strings-->
+  <string name="recipe_detail_made_recipe">Made recipe</string>
+  <string name="recipe_detail_hint_notes">Notes</string>
+  <string name="recipe_detail_recipe_from_tacofancy">Recipe from <a href="https://github.com/sinker/tacofancy">TacoFancy</a></string>
+  <string name="recipe_detail_compliment_the_chef">Compliment the chef</string>
+  <string name="recipe_detail_recipe">Recipe</string>
+  <string name="recipe_detail_base_layer">Base Layer</string>
+  <string name="recipe_detail_condiment">Condiment</string>
+  <string name="recipe_detail_mixin">Mixin</string>
+  <string name="recipe_detail_seasoning">Seasoning</string>
+  <string name="recipe_detail_shell">Shell</string>
+  <string name="recipe_detail_nacho_rating">Nacho rating</string>
+  <string name="recipe_detail_spice_rating">Spice rating</string>
+  <string name="recipe_detail_default_text">No %s content</string>
+  <string name="recipe_detail_nacho_label">Nacho</string>
+  <string name="recipe_detail_spice_label">Spice</string>
+
+  <!-- Try It-->
+  <string name="try_it_description_discard_recipe">Discard %s</string>
+  <string name="try_it_description_details_recipe">%s details</string>
+  <string name="try_it_description_made_recipe">Made %s</string>
+  <string name="try_it_description_rating">Rating %d of 5 for %s</string>
+  <string name="try_it_discard_confirm_title">Discard recipe?</string>
+  <string name="try_it_discard_confirm_message">Would you like to delete %s?</string>
+  <string name="try_it_discard_confirm_cancel">Cancel</string>
+  <string name="try_it_discard_confirm_discard">Discard</string>
+
+  <!-- Onboarding-->
+  <string name="onboarding_try_it">Orange to the right, tacos in sight!</string>
+  <string name="onboarding_try_it_description">Screenshot of swiping an orange card to the right</string>
+  <string name="onboarding_discard">Orange to the left, move on to the rest.</string>
+  <string name="onboarding_discard_description">Screenshot of swiping an orange card to the left</string>
+  <string name="onboarding_view_list">Green is keen to lead the way.</string>
+  <string name="onboarding_view_list_description">Screenshot of a list of green cards</string>
+  <string name="onboarding_taco_tuesday">Enjoy your Taco Tuesday!</string>
+  <string name="onboarding_taco_tuesday_description">Person eating a taco</string>
+  <string name="onboarding_done">Done</string>
+  <string name="onboarding_next">Next</string>
+  <string name="onboarding_back">Back</string>
+
+  <string-array name="pop_up_options">
+    <item>Are you enjoying the app? Rate it now in the Play Store!</item>
+    <item>Victoria just tried a new recipe. What recipe are you trying this week?</item>
+    <item>Jenn rated her favorite recipe 1 minute ago. Why don\'t you help others by rating yours?</item>
+    <item>Ellen made tacos on Tuesday 5 weeks in a row. Beat her streak!</item>
+    <item>Gabriella created her own taco recipe. Congratulate her!</item>
+    <item>How are you liking this app? Let\'s taco-bout it. Answer this five minute survey!</item>
+    <item>Lettuce help you find your next Taco Tuesday recipe! Swipe right on your next find.</item>
+    <item>Did you find a recipe you dislike? Nacho type of taco? Leave a rating on the details screen.</item>
+    <item>Sorry to be jalapeno grill. Do you mind taking a second to rate the app?</item>
+    <item>Spec-taco-lar! You saved your first recipe. Ready to get cooking?</item>
+    <item>Having issues with the app? We can taco-ver the phone. Contact support now.</item>
+    <item>Don\'t get caught naked! Shop for tortillas and other ingredients now $$$</item>
+    <item>Do you have a bad queso the munchies? Try one of our delicious taco recipes!</item>
+    <item>Have some feedback? You can tell us. We won\'t spill the beans.</item>
+    <item>Season the day! Try tacos on a day other than Tuesday. Tacos every day!</item>
+    <item>Let\'s not burrito round the bush. You\'re our favorite customer!</item>
+    <item>Taco chance on that recipe you\'re not sure about. You might end up loving it!</item>
+    <item>Do you have the best taco pun? Share it with us on our forum!</item>
+    <item>Taco Throw Back Thursday time! What is the best taco recipe you\'ve ever made?</item>
+    <item>Ready for Taco Tuesday? How about you use one of our tried and true recipes.</item>
+  </string-array>
+</resources>

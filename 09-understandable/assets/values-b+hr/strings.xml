@@ -1,0 +1,119 @@
+<resources>
+  <string name="app_name">Taco Utorak</string>
+
+  <!-- Shared strings-->
+  <string name="shared_try_it">Isprobaj</string>
+  <string name="shared_discard">Odbaci</string>
+  <string name="shared_details">Pojedinosti</string>
+  <string name="shared_dismiss">Napusti</string>
+  <string name="shared_generic_error_message">Taco problem! Naišli smo na grešku!</string>
+
+  <!-- Rating bar-->
+  <string name="custom_rating_bar_description">%s ima ocjenu %d od 5</string>
+
+  <!-- Bottom bar labels -->
+  <string name="bottom_bar_discover">Istraži</string>
+  <string name="bottom_bar_try_it">@string/shared_try_it</string>
+  <string name="bottom_bar_settings">Postavke</string>
+
+  <!-- Preference Titles -->
+  <string name="display_header">Prikaži</string>
+  <string name="help_header">Pomoć</string>
+
+  <!-- Display Preferences -->
+  <string name="preference_dark_mode_title">Koristi tamni način rada</string>
+  <string name="preference_auto_advance_title">Automatski odabrani recepti</string>
+  <string name="preference_onboarding_title">Pokreni upoznavanje aplikacije</string>
+  <string name="preference_onboarding_description">Pokreni upoznavanje aplikacije sljedeći put kada pokreneš aplikaciju</string>
+
+  <!-- Help Preferences -->
+  <string name="preference_book_forum_title">Pregledaj forum</string>
+
+  <!-- Details strings-->
+  <string name="recipe_detail_made_recipe">Napravi recept</string>
+  <string name="recipe_detail_hint_notes">Bilješke</string>
+  <string name="recipe_detail_recipe_from_tacofancy">Recept iz Taco-Slatko</string>
+  <string name="recipe_detail_compliment_the_chef">Pohvali kuhara</string>
+  <string name="recipe_detail_recipe">Recept</string>
+  <string name="recipe_detail_base_layer">Osnovni sloj</string>
+  <string name="recipe_detail_condiment">Začin</string>
+  <string name="recipe_detail_mixin">Umiješati</string>
+  <string name="recipe_detail_seasoning">Začinjavanje</string>
+  <string name="recipe_detail_shell">Školjka</string>
+  <string name="recipe_detail_nacho_rating">Ocjena za Nacho</string>
+  <string name="recipe_detail_spice_rating">Ocjena začina</string>
+  <string name="recipe_detail_default_text">Nema %s sadržaja</string>
+  <string name="recipe_detail_nacho_label">Nacho</string>
+  <string name="recipe_detail_spice_label">Začin</string>
+
+  <!-- Try It-->
+  <string name="try_it_description_discard_recipe">Odbaci %s</string>
+  <string name="try_it_description_details_recipe">%s pojedinosti</string>
+  <string name="try_it_description_made_recipe">Napravi %s</string>
+  <string name="try_it_description_rating">Ocjena: %d od 5 za %s</string>
+  <string name="try_it_discard_confirm_title">Odbaci recept?</string>
+  <string name="try_it_discard_confirm_message">Želiš li obrisati %s?</string>
+  <string name="try_it_discard_confirm_cancel">Otkaži</string>
+  <string name="try_it_discard_confirm_discard">Odbaci</string>
+
+  <!-- Onboarding-->
+  <string name="onboarding_try_it">Povuci narančastu karticu recepta u desno kako bi bila sačuvana za kasnije.</string>
+  <string name="onboarding_try_it_description">Slika zaslona na kojemu je povlačenje narančaste kartice u desno.</string>
+  <string name="onboarding_discard">Povuci narančastu karticu recepta u lijevo da označiš recept s \"Ne želim isprobati, hvala!\".</string>
+  <string name="onboarding_discard_description">Slika zaslona na kojemu se prikazuje povlačenje narančaste kartice u lijevo</string>
+  <string name="onboarding_details">Upravljaj svojim receptima koristeći \"Isprobaj\" and \"Odbaci\" gumbe na zaslonu s pojedinostima.</string>
+  <string name="onboarding_details_description">Palac gore ikona</string>
+  <string name="onboarding_view_list">Nakon toga možeš pregledati list recepata koje želiš isprobati.</string>
+  <string name="onboarding_view_list_description">Slika zaslona na kojemu je lista zelenih kartica</string>
+  <string name="onboarding_taco_tuesday">Uživaj u Taco Utorku!</string>
+  <string name="onboarding_taco_tuesday_description">Osoba koja jede taco</string>
+  <string name="onboarding_done">Gotovo</string>
+  <string name="onboarding_next">Sljedeće</string>
+  <string name="onboarding_back">Nazad</string>
+
+  <string-array name="pop_up_options">
+    <item>Uživaš li u aplikaciji? Ocijeni nas na Trgovini Play!</item>
+    <item>Victoria je upravo isprobala novi recept. Koji recept ćeš ti probati ovaj tjedan?</item>
+    <item>Jenn je ocijenila svoj omiljeni recept prije 1 minutu. Hoćeš li pomoći drugim korisnicima svojom ocjenom omiljenog recepta?</item>
+    <item>Ellen je pravila tacose svaki utorak 5 tjedana za redom. Pobijedi njezin niz!</item>
+    <item>Gabriela je napravila svoj taco recept. Čestitaj joj!</item>
+    <item>Kako ti se sviđa aplikacija? Odgovori na 5-minutnu anketu.</item>
+    <item>Zelena salata ti može pomoći da pronađeš svoj sljedeći recept za Taco Utorak! Povuci u desno kako bi ga pronašao/la.</item>
+    <item>Postoji recept koji ti se ne sviđa? Nacho tip tacosa? Ostavi ocjenu na zaslonu s pojedinostima.</item>
+    <item>Možeš li odvojiti sekundu za ocjenjivanje aplikaacije?</item>
+    <item>Spek-taco-larno! Prvi recept spremljen! Spremni za kuhanje?</item>
+    <item>Imaš problema s aplikacijom? Možemo preuzeti taco-ntrolu nad uređajem. Kontaktiraj podrušku odmh.</item>
+    <item>Nemoj ostati gladan! Kupi tortilje i druge sastojke odmah!</item>
+    <item>Imaš loš dan? Isprobaj jedan od naših ukusnih taco recepata!</item>
+    <item>Imaš povratnu informaciju? Možeš nam reći, nećemo te izdati.</item>
+    <item>Začini dan! Isprobaj tacose i drugim danima, ne samo utorkom. Tacosi svaki dan!</item>
+    <item>Ti si naš omiljeni korisnik!</item>
+    <item>Daj priliku ovom Taco receptu. Možda ga zavoliš!</item>
+    <item>Imaš li omiljeno taco punjenje? Podijeli ga s nama na forumu!</item>
+    <item>>Vrijeme za Taco četvrtak podsjetnik! Koji je najbolji Taco recept koji si napravio/la?</item>
+    <item>Spremni za Taco Utorak? Isprobaj jedan od naših odličnih i provjerenih Taco recepata.</item>
+  </string-array>
+
+  <string-array name="pop_up_alternates">
+    <item>Uživaš li u aplikaciji? Ocijeni nas na Trgovini Play!</item>
+    <item>Victoria je upravo isprobala novi recept. Koji recept ćeš ti probati ovaj tjedan?</item>
+    <item>Jenn je ocijenila svoj omiljeni recept prije 1 minutu. Hoćeš li pomoći drugim korisnicima svojom ocjenom omiljenog recepta?</item>
+    <item>Ellen je pravila tacose svaki utorak 5 tjedana za redom. Pobijedi njezin niz!</item>
+    <item>Gabriela je napravila svoj taco recept. Čestitaj joj!</item>
+    <item>Kako ti se sviđa aplikacija? Odgovori na 5-minutnu anketu.</item>
+    <item>Zelena salata ti može pomoći da pronađeš svoj sljedeći recept za Taco Utorak! Povuci u desno kako bi ga pronašao/la.</item>
+    <item>Postoji recept koji ti se ne sviđa? Nacho tip tacosa? Ostavi ocjenu na zaslonu s pojedinostima.</item>
+    <item>Možeš li odvojiti sekundu za ocjenjivanje aplikaacije?</item>
+    <item>Spek-taco-larno! Prvi recept spremljen! Spremni za kuhanje?</item>
+    <item>Imaš problema s aplikacijom? Možemo preuzeti taco-ntrolu nad uređajem. Kontaktiraj podrušku odmh.</item>
+    <item>Nemoj ostati gladan! Kupi tortilje i druge sastojke odmah!</item>
+    <item>Imaš loš dan? Isprobaj jedan od naših ukusnih taco recepata!</item>
+    <item>Imaš povratnu informaciju? Možeš nam reći, nećemo te izdati.</item>
+    <item>Začini dan! Isprobaj tacose i drugim danima, ne samo utorkom. Tacosi svaki dan!</item>
+    <item>Ti si naš omiljeni korisnik!</item>
+    <item>Daj priliku ovom Taco receptu. Možda ga zavoliš!</item>
+    <item>Imaš li omiljeno taco punjenje? Podijeli ga s nama na forumu!</item>
+    <item>>Vrijeme za Taco četvrtak podsjetnik! Koji je najbolji Taco recept koji si napravio/la?</item>
+    <item>Spremni za Taco Utorak? Isprobaj jedan od naših odličnih i provjerenih Taco recepata.</item>
+  </string-array>
+</resources>

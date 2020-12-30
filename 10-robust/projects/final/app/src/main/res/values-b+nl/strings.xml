@@ -1,0 +1,98 @@
+<resources>
+  <string name="app_name">Taco Tijd</string>
+
+  <!-- Shared strings-->
+  <string name="shared_try_it">Probeer</string>
+  <string name="shared_discard">Afleggen</string>
+  <string name="shared_details">Details</string>
+  <string name="shared_dismiss">Wegzenden</string>
+  <string name="shared_generic_error_message">Taco-bout a mess! We ran into an error when trying to do that</string>
+
+  <!-- Rating bar-->
+  <string name="custom_rating_bar_description">%s beoordeling %d uit 5</string>
+
+  <!-- Bottom bar labels -->
+  <string name="bottom_bar_discover">Ontdek</string>
+  <string name="bottom_bar_try_it">@string/shared_try_it</string>
+  <string name="bottom_bar_settings">Instellingen</string>
+
+  <!-- Preference Titles -->
+  <string name="display_header">Scherm</string>
+  <string name="help_header">Hulp</string>
+
+  <!-- Display Preferences -->
+  <string name="preference_dark_mode_title">Donkere modus</string>
+  <string name="preference_auto_advance_title">Auto-doorgan recepeten</string>
+  <string name="preference_onboarding_title">Toon on-boarding</string>
+  <string name="preference_onboarding_description">Toon on-boarding volgende keer u de app opent</string>
+
+  <!-- Help Preferences -->
+  <string name="preference_book_forum_title">Bekijk boekforum</string>
+
+  <!-- Details strings-->
+  <string name="recipe_detail_made_recipe">Recept gemaakt</string>
+  <string name="recipe_detail_hint_notes">Notities</string>
+  <string name="recipe_detail_recipe_from_tacofancy">Recept van TacoFancy</string>
+  <string name="recipe_detail_compliment_the_chef">Complimenteer de chef</string>
+  <string name="recipe_detail_recipe">Recept</string>
+  <string name="recipe_detail_base_layer">Basislaag</string>
+  <string name="recipe_detail_condiment">Kruiderij</string>
+  <string name="recipe_detail_mixin">Mixin</string>
+  <string name="recipe_detail_seasoning">Kruiden</string>
+  <string name="recipe_detail_shell">Schelp</string>
+  <string name="recipe_detail_nacho_rating">Nacho beoordeling</string>
+  <string name="recipe_detail_spice_rating">Specerijen beoordeling</string>
+  <string name="recipe_detail_default_text">Geen %s inhoud</string>
+  <string name="recipe_detail_nacho_label">Nacho</string>
+  <string name="recipe_detail_spice_label">Specerijen</string>
+
+  <!-- Try It-->
+  <string name="try_it_description_discard_recipe">Discard %s</string>
+  <string name="try_it_description_details_recipe">%s details</string>
+  <string name="try_it_description_made_recipe">%s gemaakt</string>
+  <string name="try_it_description_rating">Beoordeling %d uit 5 voor %s</string>
+  <string name="try_it_discard_confirm_title">Recept afleggen?</string>
+  <string name="try_it_discard_confirm_message">Wilt u %s afleggen?</string>
+  <string name="try_it_discard_confirm_cancel">Annuleren</string>
+  <string name="try_it_discard_confirm_discard">Afleggen</string>
+
+  <!-- Onboarding-->
+  <string name="onboarding_try_it">Veeg de oranje receptenkaart naar rechts om deze op te slaan en later te proberen.</string>
+  <string name="onboarding_try_it_description">Screenshot van een oranje kaart naar rechts vegen</string>
+  <string name="onboarding_discard">Veeg de oranje receptenkaart naar links om \"nee, bedankt!\" tegen een recept te zeggen.</string>
+  <string name="onboarding_discard_description">Screenshot van een oranje kaart naar links vegen</string>
+  <string name="onboarding_details">Beheer uw recepten met de \"Probeer\" en de \"Afleggen\" knoppen in de detail scherm.</string>
+  <string name="onboarding_details_description">Duim omhoog pictogram</string>
+  <string name="onboarding_view_list">Vervolgens kunt u de lijst met recepten bekijken die u wilt proberen.</string>
+  <string name="onboarding_view_list_description">Screenshot of a list of green cards</string>
+  <string name="onboarding_taco_tuesday">Geniet van je Taco-Tijd!</string>
+  <string name="onboarding_taco_tuesday_description">Persoon die een taco eet
+</string>
+  <string name="onboarding_done">Gedaan</string>
+  <string name="onboarding_next">Volgende</string>
+  <string name="onboarding_back">Terug</string>
+
+  <string-array name="pop_up_options">
+    <item>Vind je deze app leuk? Beoordeel nu in de Play Store!</item>
+    <item>Victoria heeft net een nieuw recept geprobeerd. Welk recept probeer je deze week?</item>
+    <item>Jenn heeft haar favoriete recept 1 minuut geleden beoordeeld. Waarom help je anderen niet door de jouwe te beoordelen?</item>
+    <item>Ellen maakte 5 weken op rij taco\'s. Versla haar streak!</item>
+    <item>Gabriella heeft haar eigen taco-recept gemaakt. Feliciteer haar!</item>
+    <item>Spec-taco-lair! Je hebt je eerste recept bewaard. Klaar om te koken?</item>
+    <item>Laat u niet naakt betrappen! Koop nu tortilla\'s en andere ingrediënten.</item>
+    <item>Heb jij de beste taco-woordspeling? Deel het met ons op ons forum!</item>
+    <item>Klaar voor Taco-tijd? Gebruik een van onze beproefde recepten.</item>
+  </string-array>
+
+  <string-array name="pop_up_alternates">
+    <item>Vind je deze app leuk? Beoordeel nu in de Play Store!</item>
+    <item>Victoria heeft net een nieuw recept geprobeerd. Welk recept probeer je deze week?</item>
+    <item>Jenn heeft haar favoriete recept 1 minuut geleden beoordeeld. Waarom help je anderen niet door de jouwe te beoordelen?</item>
+    <item>Ellen maakte 5 weken op rij taco\'s. Versla haar streak!</item>
+    <item>Gabriella heeft haar eigen taco-recept gemaakt. Feliciteer haar!</item>
+    <item>Spec-taco-lair! Je hebt je eerste recept bewaard. Klaar om te koken?</item>
+    <item>Laat u niet naakt betrappen! Koop nu tortilla\'s en andere ingrediënten.</item>
+    <item>Heb jij de beste taco-woordspeling? Deel het met ons op ons forum!</item>
+    <item>Klaar voor Taco-tijd? Gebruik een van onze beproefde recepten.</item>
+  </string-array>
+</resources>

@@ -1,0 +1,119 @@
+<resources>
+  <string name="app_name">Taco às Terças</string>
+
+  <!-- Shared strings-->
+  <string name="shared_try_it">Experimenta</string>
+  <string name="shared_discard">Descartar</string>
+  <string name="shared_details">Detalhes</string>
+  <string name="shared_dismiss">Cancelar</string>
+  <string name="shared_generic_error_message">Taco-com confusão! Encontrámos um problema enquanto estávamos a tentar fazer isto</string>
+
+  <!-- Rating bar-->
+  <string name="custom_rating_bar_description">%s tem uma classificação %d de 5</string>
+
+  <!-- Bottom bar labels -->
+  <string name="bottom_bar_discover">Descobre</string>
+  <string name="bottom_bar_try_it">@string/shared_try_it</string>
+  <string name="bottom_bar_settings">Definições</string>
+
+  <!-- Preference Titles -->
+  <string name="display_header">Mostrar</string>
+  <string name="help_header">Ajuda</string>
+
+  <!-- Display Preferences -->
+  <string name="preference_dark_mode_title">Utiliza o modo noturno</string>
+  <string name="preference_auto_advance_title">Receitas avançadas automáticas</string>
+  <string name="preference_onboarding_title">Ver o ecrã inicial</string>
+  <string name="preference_onboarding_description">Ver o ecrã inicial da próxima vez que abrires a aplicação</string>
+
+  <!-- Help Preferences -->
+  <string name="preference_book_forum_title">Ver o forum de livros</string>
+
+  <!-- Details strings-->
+  <string name="recipe_detail_made_recipe">Segue uma receita</string>
+  <string name="recipe_detail_hint_notes">Notas</string>
+  <string name="recipe_detail_recipe_from_tacofancy">Receitas de TacoChique</string>
+  <string name="recipe_detail_compliment_the_chef">Cumprimentos ao chef</string>
+  <string name="recipe_detail_recipe">Receita</string>
+  <string name="recipe_detail_base_layer">Camada base</string>
+  <string name="recipe_detail_condiment">Condimentos</string>
+  <string name="recipe_detail_mixin">Mistura</string>
+  <string name="recipe_detail_seasoning">Tempero</string>
+  <string name="recipe_detail_shell">Concha</string>
+  <string name="recipe_detail_nacho_rating">Classificação nachos</string>
+  <string name="recipe_detail_spice_rating">Classificação especiairias</string>
+  <string name="recipe_detail_default_text">Não existem %s </string>
+  <string name="recipe_detail_nacho_label">Nacho</string>
+  <string name="recipe_detail_spice_label">Especiaria</string>
+
+  <!-- Try It-->
+  <string name="try_it_description_discard_recipe">Descartar %s</string>
+  <string name="try_it_description_details_recipe">%s detalhes</string>
+  <string name="try_it_description_made_recipe">Feito por %s</string>
+  <string name="try_it_description_rating">Classificação %d de 5 por %s</string>
+  <string name="try_it_discard_confirm_title">Descartar esta receita?</string>
+  <string name="try_it_discard_confirm_message">Pretendes apagar %s?</string>
+  <string name="try_it_discard_confirm_cancel">Cancelar</string>
+  <string name="try_it_discard_confirm_discard">Descartar</string>
+
+  <!-- Onboarding-->
+  <string name="onboarding_try_it">Desliza a receita laranja para a direita para a guardares para mais logo.</string>
+  <string name="onboarding_try_it_description">Imagem de deslizar o cartão laranja para a direita</string>
+  <string name="onboarding_discard">Desliza a receita laranja para a esquerda para dizeres \"não, obrigado!\" a uma receita.</string>
+  <string name="onboarding_discard_description">Imagem de deslizar o cartão laranja para a esquerda</string>
+  <string name="onboarding_details">Organiza as tuas receitas a partir dos botões \"Experimenta\" e \"Descarta\" na vista de detalhes.</string>
+  <string name="onboarding_details_description">Ícone de gosto</string>
+  <string name="onboarding_view_list">Depois podes ver a lista de receitas que queres experimentar.</string>
+  <string name="onboarding_view_list_description">Imagem de uma lista de cartões verdes</string>
+  <string name="onboarding_taco_tuesday">Aproveita a tua Terça-Feira de Tacos!</string>
+  <string name="onboarding_taco_tuesday_description">Uma pessoa a comer um taco</string>
+  <string name="onboarding_done">Feito</string>
+  <string name="onboarding_next">Próximo</string>
+  <string name="onboarding_back">Anterior</string>
+
+  <string-array name="pop_up_options">
+    <item>Estás a gostar desta aplicação? Classifica-a na Play Store!</item>
+    <item>A Victoria acabou de fazer uma nova receita. Que receita estás a tentar fazer esta semana?</item>
+    <item>A Jenn acabou de classificar a sua receita favorita há um minuto atrás. Por que não ajudas os outros e classificas as tuas?</item>
+    <item>A Ellen fez tacos durante 5 semanas seguidas. Tenta bater este recorde!</item>
+    <item>A Gabriella criou a sua própria receita de tacos. Dá-lhe os parabéns!</item>
+    <item>Estás a gostar desta aplicação? Vamos falar taco-a-taco sobre ela. Responde a este inquérito de 5 minutos!</item>
+    <item>Vamos ajudar-te a encontrar a tua próxima receita para as Terças-Feiras de Tacos! Desliza para a direita na próxima receita.</item>
+    <item>Encontraste uma receita que não gostaste? Nacho é o teu tipo de taco? Deixa uma nota no ecrã de detalhes.</item>
+    <item>Desculpa estar a incomodar-te. Não te importas de perder um segundo para classificar esta aplicação?</item>
+    <item>Espe-taco-lar! Guardaste a tua primeira receita. Pronto para cozinhar?</item>
+    <item>Encontraste um problema na aplicação? Vamos taco-ve-los. Contacta o suport.</item>
+    <item>Não te apanhes sem nada no frigorífico! Compra tortilhas e outros ingredientes agora mesmo</item>
+    <item>Estás cheio de larica? Experimenta uma das nossas deliciosas receitas de tacos!</item>
+    <item>Tens sugestões para nós? Podes dizer-nos à vontade.</item>
+    <item>Aproveita o dia! Come tacos em qualquer dia da semana. Tacos todos os dias!</item>
+    <item>Não andes às voltas. Tu és o nosso cliente favorito!</item>
+    <item>E que tal fazeres aquela receita de tacos que ainda não tens a certeza? Podes acabar por a adorar!</item>
+    <item>Tens a melhor piada sobre tacos? Partilha connosco no nosso forum!</item>
+    <item>É altura de nos lembrarmos das Terças-Feiras de tacos! Qual é a melhor receita de tacos que já fizeste?</item>
+    <item>Estás pronto para a Terça-Feira de Tacos? Que tal experimentares uma das nossas receitas.</item>
+  </string-array>
+
+  <string-array name="pop_up_alternates">
+    <item>Estás a gostar desta aplicação? Classifica-a na Play Store!</item>
+    <item>A Victoria acabou de fazer uma nova receita. Que receita estás a tentar fazer esta semana?</item>
+    <item>A Jenn acabou de classificar a sua receita favorita há um minuto atrás. Por que não ajudas os outros e classificas as tuas?</item>
+    <item>A Ellen fez tacos durante 5 semanas seguidas. Tenta bater este recorde!</item>
+    <item>A Gabriella criou a sua própria receita de tacos. Dá-lhe os parabéns!</item>
+    <item>Estás a gostar desta aplicação? Vamos falar taco-a-taco sobre ela. Responde a este inquérito de 5 minutos!</item>
+    <item>Vamos ajudar-te a encontrar a tua próxima receita para as Terças-Feiras de Tacos! Desliza para a direita na próxima receita.</item>
+    <item>Encontraste uma receita que não gostaste? Nacho é o teu tipo de taco? Deixa uma nota no ecrã de detalhes.</item>
+    <item>Desculpa estar a incomodar-te. Não te importas de perder um segundo para classificar esta aplicação?</item>
+    <item>Espe-taco-lar! Guardaste a tua primeira receita. Pronto para cozinhar?</item>
+    <item>Encontraste um problema na aplicação? Vamos taco-ve-los. Contacta o suport.</item>
+    <item>Não te apanhes sem nada no frigorífico! Compra tortilhas e outros ingredientes agora mesmo</item>
+    <item>Estás cheio de larica? Experimenta uma das nossas deliciosas receitas de tacos!</item>
+    <item>Tens sugestões para nós? Podes dizer-nos à vontade.</item>
+    <item>Aproveita o dia! Come tacos em qualquer dia da semana. Tacos todos os dias!</item>
+    <item>Não andes às voltas. Tu és o nosso cliente favorito!</item>
+    <item>E que tal fazeres aquela receita de tacos que ainda não tens a certeza? Podes acabar por a adorar!</item>
+    <item>Tens a melhor piada sobre tacos? Partilha connosco no nosso forum!</item>
+    <item>É altura de nos lembrarmos das Terças-Feiras de tacos! Qual é a melhor receita de tacos que já fizeste?</item>
+    <item>Estás pronto para a Terça-Feira de Tacos? Que tal experimentares uma das nossas receitas.</item>
+  </string-array>
+</resources>

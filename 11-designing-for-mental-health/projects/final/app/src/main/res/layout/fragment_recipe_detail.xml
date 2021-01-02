@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2020 Razeware LLC
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+  ~ distribute, sublicense, create a derivative work, and/or sell copies of the
+  ~ Software in any work that is designed, intended, or marketed for pedagogical or
+  ~ instructional purposes related to programming, coding, application development,
+  ~ or information technology.  Permission for such use, copying, modification,
+  ~ merger, publication, distribution, sublicensing, creation of derivative works,
+  ~ or sale is expressly withheld.
+  ~
+  ~ This project and source code may use libraries or frameworks that are
+  ~ released under various Open-Source licenses. Use of those libraries and
+  ~ frameworks are governed by their own individual licenses.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/space_normal"
+    tools:context=".detail.RecipeDetailFragment">
+
+    <TextView
+      android:id="@+id/recipe_detail_recipe"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      tools:text="Slow Cooker Chicken in Chile de Arbol sauce\n===========================================\n\nThis is much like the [Slow-Cooked Salsa Verde Chicken](/base_layers/slow_cooked_salsa_verde_chicken.md),\nbut cooked in the [Chile de Arbol sauce](/condiments/chile_de_arbol_sauce.md)." />
+
+    <TextView
+      style="@style/AppTheme.TextKicker"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:accessibilityHeading="true"
+      android:text="@string/recipe_detail_base_layer" />
+
+    <TextView
+      android:id="@+id/recipe_detail_base_layer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      tools:text="Slow-Cooked Salsa Verde Chicken\n===============================\n\nLow-effort, delicious shredded chicken based off [this recipe](http://www.skinnytaste.com/2013/04/easiest-crock-pot-salsa-verde-chicken.html)." />
+
+    <TextView
+      style="@style/AppTheme.TextKicker"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:accessibilityHeading="true"
+      android:text="@string/recipe_detail_condiment" />
+
+    <TextView
+      android:id="@+id/recipe_detail_condiment"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      tools:text="Salsa de Aguacate\n==========\n\nThis is the traditional green sauce served from a Mexican taco cart." />
+
+    <TextView
+      style="@style/AppTheme.TextKicker"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:accessibilityHeading="true"
+      android:text="@string/recipe_detail_mixin" />
+
+    <TextView
+      android:id="@+id/recipe_detail_mixin"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      tools:text="Mixin recipe" />
+
+    <TextView
+      style="@style/AppTheme.TextKicker"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:accessibilityHeading="true"
+      android:text="@string/recipe_detail_seasoning" />
+
+    <TextView
+      android:id="@+id/recipe_detail_seasoning"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      tools:text="Seasoning recipe" />
+
+    <TextView
+      style="@style/AppTheme.TextKicker"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:accessibilityHeading="true"
+      android:text="@string/recipe_detail_shell" />
+
+    <TextView
+      android:id="@+id/recipe_detail_shell"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      tools:text="Shell recipe" />
+
+    <TextView
+      android:id="@+id/recipe_detail_credit_text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/space_normal"
+      android:paddingBottom="@dimen/space_normal"
+      android:text="@string/recipe_detail_recipe_from_tacofancy"
+      android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <View
+      android:id="@+id/recipe_detail_divider"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="?colorControlHighlight" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/recipe_detail_try_discard_button"
+      style="@style/Widget.MaterialComponents.Button.TextButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:contentDescription="@string/shared_try_it"
+      android:padding="@dimen/space_normal"
+      android:text="@string/shared_try_it"
+      app:icon="@drawable/ic_baseline_thumb_up_24" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/space_normal"
+      android:paddingBottom="@dimen/space_normal"
+      android:text="@string/recipe_detail_save"
+      android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <CheckBox
+      android:id="@+id/recipe_detail_made_it"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/recipe_detail_made_recipe" />
+
+    <LinearLayout
+      android:id="@+id/recipe_nacho_rating_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:focusable="true"
+      android:focusableInTouchMode="false"
+      android:orientation="vertical">
+
+      <TextView
+        style="@style/AppTheme.TextKicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:accessibilityHeading="true"
+        android:text="@string/recipe_detail_nacho_rating" />
+
+      <com.raywenderlich.android.tacotuesday.shared.CustomRatingBar
+        android:id="@+id/recipe_nacho_rating"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_rating_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/space_normal"
+        app:drawableChecked="@drawable/nacho_dip"
+        app:drawableUnchecked="@drawable/nacho"
+        app:ratingLabel="@string/recipe_detail_nacho_label" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/recipe_spice_rating_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:focusable="true"
+      android:focusableInTouchMode="false"
+      android:orientation="vertical">
+
+      <TextView
+        style="@style/AppTheme.TextKicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:accessibilityHeading="true"
+        android:text="@string/recipe_detail_spice_rating" />
+
+      <com.raywenderlich.android.tacotuesday.shared.CustomRatingBar
+        android:id="@+id/recipe_spice_rating"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_rating_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/space_normal"
+        app:drawableChecked="@drawable/pepper_filled"
+        app:drawableUnchecked="@drawable/pepper"
+        app:ratingLabel="@string/recipe_detail_spice_label" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/recipe_detail_notes_input_layout"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:hint="@string/recipe_detail_hint_notes">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/recipe_detail_notes_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+      android:id="@+id/recipe_detail_error_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/space_normal"
+      android:text="@string/shared_generic_error_message"
+      android:textColor="?colorError"
+      android:visibility="gone"
+      tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/recipe_detail_compliment_the_chef"
+      style="@style/Widget.MaterialComponents.Button.TextButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/space_normal"
+      android:text="@string/recipe_detail_compliment_the_chef" />
+
+  </LinearLayout>
+</ScrollView>

@@ -9,12 +9,12 @@ android {
   compileSdkVersion rootProject.ext.compileSdkVersion
 
   defaultConfig {
-    applicationId "com.raywenderlich.android.tacotuesday"
+    applicationId "com.mycompany.android.tacotuesday"
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
     versionCode 1
     versionName "1.0"
-    testInstrumentationRunner "com.raywenderlich.android.tacotuesday.TestRunner"
+    testInstrumentationRunner "com.mycompany.android.tacotuesday.TestRunner"
   }
 
   buildTypes {

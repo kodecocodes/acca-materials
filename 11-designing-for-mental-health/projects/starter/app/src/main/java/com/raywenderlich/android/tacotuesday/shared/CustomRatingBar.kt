@@ -31,7 +31,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.raywenderlich.android.tacotuesday.shared
+package com.mycompany.android.tacotuesday.shared
 
 import android.content.Context
 import android.graphics.Canvas
@@ -47,7 +47,7 @@ import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.view.ViewCompat
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import androidx.customview.widget.ExploreByTouchHelper
-import com.raywenderlich.android.tacotuesday.R
+import com.mycompany.android.tacotuesday.R
 
 
 class CustomRatingBar @JvmOverloads constructor(

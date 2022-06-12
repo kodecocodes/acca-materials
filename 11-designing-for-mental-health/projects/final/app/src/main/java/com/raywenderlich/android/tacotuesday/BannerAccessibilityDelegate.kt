@@ -1,4 +1,4 @@
-package com.raywenderlich.android.tacotuesday
+package com.mycompany.android.tacotuesday
 
 import android.view.View
 import androidx.core.view.AccessibilityDelegateCompat

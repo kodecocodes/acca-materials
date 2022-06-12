@@ -173,7 +173,7 @@
         android:accessibilityHeading="true"
         android:text="@string/recipe_detail_nacho_rating" />
 
-      <com.raywenderlich.android.tacotuesday.shared.CustomRatingBar
+      <com.mycompany.android.tacotuesday.shared.CustomRatingBar
         android:id="@+id/recipe_nacho_rating"
         android:layout_width="match_parent"
         android:layout_height="@dimen/detail_rating_height"
@@ -199,7 +199,7 @@
         android:accessibilityHeading="true"
         android:text="@string/recipe_detail_spice_rating" />
 
-      <com.raywenderlich.android.tacotuesday.shared.CustomRatingBar
+      <com.mycompany.android.tacotuesday.shared.CustomRatingBar
         android:id="@+id/recipe_spice_rating"
         android:layout_width="match_parent"
         android:layout_height="@dimen/detail_rating_height"

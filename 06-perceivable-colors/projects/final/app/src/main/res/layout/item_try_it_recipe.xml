@@ -101,7 +101,7 @@
       app:layout_constraintTop_toBottomOf="@id/item_recipe_rating"
       app:tint="?colorOnPrimary" />
 
-    <com.raywenderlich.android.tacotuesday.shared.CustomRatingBar
+    <com.mycompany.android.tacotuesday.shared.CustomRatingBar
       android:id="@+id/item_recipe_rating"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"

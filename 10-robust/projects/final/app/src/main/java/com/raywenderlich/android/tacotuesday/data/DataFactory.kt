@@ -32,9 +32,9 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.data
+package com.mycompany.android.tacotuesday.data
 
-import com.raywenderlich.android.tacotuesday.R
+import com.mycompany.android.tacotuesday.R
 
 /**
  * All recipes are from https://github.com/sinker/tacofancy

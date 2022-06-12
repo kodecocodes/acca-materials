@@ -32,7 +32,7 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.discover
+package com.mycompany.android.tacotuesday.discover
 
 import android.content.SharedPreferences
 import androidx.hilt.Assisted
@@ -40,10 +40,10 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.raywenderlich.android.tacotuesday.data.Recipe
-import com.raywenderlich.android.tacotuesday.data.RecipeRepository
-import com.raywenderlich.android.tacotuesday.shared.TryDiscardRecipeViewModel
-import com.raywenderlich.android.tacotuesday.shared.TryDiscardRecipeViewModelImpl
+import com.mycompany.android.tacotuesday.data.Recipe
+import com.mycompany.android.tacotuesday.data.RecipeRepository
+import com.mycompany.android.tacotuesday.shared.TryDiscardRecipeViewModel
+import com.mycompany.android.tacotuesday.shared.TryDiscardRecipeViewModelImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay

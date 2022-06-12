@@ -32,13 +32,13 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.tryIt
+package com.mycompany.android.tacotuesday.tryIt
 
 import android.graphics.Canvas
 import android.view.View
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.raywenderlich.android.tacotuesday.data.Recipe
+import com.mycompany.android.tacotuesday.data.Recipe
 
 
 class SwipeToDiscardCallback(

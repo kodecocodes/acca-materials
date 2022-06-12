@@ -32,13 +32,13 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.tryIt
+package com.mycompany.android.tacotuesday.tryIt
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
-import com.raywenderlich.android.tacotuesday.data.RecipeRepository
-import com.raywenderlich.android.tacotuesday.shared.TryDiscardRecipeViewModel
-import com.raywenderlich.android.tacotuesday.shared.TryDiscardRecipeViewModelImpl
+import com.mycompany.android.tacotuesday.data.RecipeRepository
+import com.mycompany.android.tacotuesday.shared.TryDiscardRecipeViewModel
+import com.mycompany.android.tacotuesday.shared.TryDiscardRecipeViewModelImpl
 
 class TryItRecipesViewModel @ViewModelInject constructor(
     private val recipeRepository: RecipeRepository

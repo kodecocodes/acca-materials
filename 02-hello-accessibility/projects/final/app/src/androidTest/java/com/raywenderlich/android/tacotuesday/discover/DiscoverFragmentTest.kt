@@ -32,18 +32,18 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.discover
+package com.mycompany.android.tacotuesday.discover
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.matcher.ViewMatchers
 import com.nhaarman.mockitokotlin2.*
-import com.raywenderlich.android.tacotuesday.MainActivity
-import com.raywenderlich.android.tacotuesday.R
-import com.raywenderlich.android.tacotuesday.data.Recipe
-import com.raywenderlich.android.tacotuesday.data.RecipeRepository
-import com.raywenderlich.android.tacotuesday.data.RepositoryModule
+import com.mycompany.android.tacotuesday.MainActivity
+import com.mycompany.android.tacotuesday.R
+import com.mycompany.android.tacotuesday.data.Recipe
+import com.mycompany.android.tacotuesday.data.RecipeRepository
+import com.mycompany.android.tacotuesday.data.RepositoryModule
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

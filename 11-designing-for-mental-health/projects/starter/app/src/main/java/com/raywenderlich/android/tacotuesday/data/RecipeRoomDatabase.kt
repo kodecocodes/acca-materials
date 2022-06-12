@@ -32,7 +32,7 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.data
+package com.mycompany.android.tacotuesday.data
 
 import android.content.Context
 import androidx.room.Database

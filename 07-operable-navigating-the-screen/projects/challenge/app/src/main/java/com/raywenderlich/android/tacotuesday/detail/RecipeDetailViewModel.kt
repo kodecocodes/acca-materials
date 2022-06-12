@@ -34,17 +34,18 @@
 
 package com.raywenderlich.android.tacotuesday.detail
 
-import androidx.hilt.Assisted
-import androidx.hilt.lifecycle.ViewModelInject
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.raywenderlich.android.tacotuesday.shared.TryDiscardRecipeViewModel
 import com.raywenderlich.android.tacotuesday.shared.TryDiscardRecipeViewModelImpl
 import com.raywenderlich.android.tacotuesday.data.RecipeRepository
 
-class RecipeDetailViewModel @ViewModelInject constructor(
+@HiltViewModel
+class RecipeDetailViewModel @Inject constructor(
     private val recipeRepository: RecipeRepository,
-    @Assisted savedStateHandle: SavedStateHandle
+    savedStateHandle: SavedStateHandle
 ) : ViewModel(), TryDiscardRecipeViewModel by TryDiscardRecipeViewModelImpl(
     recipeRepository) {
 

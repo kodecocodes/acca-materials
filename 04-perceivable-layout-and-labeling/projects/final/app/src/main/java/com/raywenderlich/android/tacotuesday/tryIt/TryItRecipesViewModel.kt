@@ -34,13 +34,15 @@
 
 package com.raywenderlich.android.tacotuesday.tryIt
 
-import androidx.hilt.lifecycle.ViewModelInject
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import androidx.lifecycle.ViewModel
 import com.raywenderlich.android.tacotuesday.data.RecipeRepository
 import com.raywenderlich.android.tacotuesday.shared.TryDiscardRecipeViewModel
 import com.raywenderlich.android.tacotuesday.shared.TryDiscardRecipeViewModelImpl
 
-class TryItRecipesViewModel @ViewModelInject constructor(
+@HiltViewModel
+class TryItRecipesViewModel @Inject constructor(
     private val recipeRepository: RecipeRepository
 ) : ViewModel(), TryDiscardRecipeViewModel by TryDiscardRecipeViewModelImpl(
     recipeRepository) {

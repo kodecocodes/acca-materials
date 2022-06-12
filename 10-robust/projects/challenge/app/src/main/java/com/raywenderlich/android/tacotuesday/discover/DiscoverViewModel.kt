@@ -35,8 +35,8 @@
 package com.raywenderlich.android.tacotuesday.discover
 
 import android.content.SharedPreferences
-import androidx.hilt.Assisted
-import androidx.hilt.lifecycle.ViewModelInject
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -49,10 +49,11 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class DiscoverViewModel @ViewModelInject constructor(
+@HiltViewModel
+class DiscoverViewModel @Inject constructor(
     private val recipeRepository: RecipeRepository,
     private val sharedPreferences: SharedPreferences,
-    @Assisted savedStateHandle: SavedStateHandle
+    savedStateHandle: SavedStateHandle
 ) : ViewModel(), TryDiscardRecipeViewModel by TryDiscardRecipeViewModelImpl(
     recipeRepository) {
 

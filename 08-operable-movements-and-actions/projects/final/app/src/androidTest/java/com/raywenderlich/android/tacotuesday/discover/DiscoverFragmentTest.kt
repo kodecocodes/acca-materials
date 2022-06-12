@@ -50,7 +50,7 @@ import com.raywenderlich.android.tacotuesday.data.RepositoryModule
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.components.SingletonComponent
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.UninstallModules
@@ -124,7 +124,7 @@ class DiscoverFragmentTest {
   }
 
   @Module
-  @InstallIn(ApplicationComponent::class)
+  @InstallIn(SingletonComponent::class)
   object TestModule {
 
     @Provides

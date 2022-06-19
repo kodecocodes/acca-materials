@@ -43,7 +43,6 @@ import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.constraintlayout.motion.widget.TransitionAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.mycompany.android.tacotuesday.R
 import com.mycompany.android.tacotuesday.data.Recipe
@@ -64,7 +63,7 @@ class DiscoverFragment : Fragment() {
       inflater: LayoutInflater,
       container: ViewGroup?,
       savedInstanceState: Bundle?
-  ): View? {
+  ): View {
 
     binding = FragmentDiscoverBinding.inflate(layoutInflater, container, false)
 
@@ -102,7 +101,7 @@ class DiscoverFragment : Fragment() {
       }
     }
     with(viewModel) {
-      nextRecipe.observe(viewLifecycleOwner, { showRecipe(it) })
+      nextRecipe.observe(viewLifecycleOwner) { showRecipe(it) }
       viewModel.fetchRandomTaco()
     }
     return binding.root

@@ -688,7 +688,7 @@ object DataFactory {
                 "\n" +
                 "tags: vegetarian\n" +
                 sourCream,
-            photoRes = R.drawable.taco_5),
+            photoRes = R.drawable.taco_4),
         Recipe(
             name = "Chicken Verde, Corn and Black Bean Tacos with Pico de Gallo and Salsa de " +
                 "Aguacate",
@@ -965,7 +965,7 @@ object DataFactory {
                 "2. Heat the oil or fat in a pan over medium high heat. When it is hot, add the pineapple.\n" +
                 "3. Don't stir too much, let it get good and brown, this takes a few minutes. Watch to make sure the pineappled doesn't burn. Stir once or twice to brown a few different sides of the fruit.\n" +
                 "4. Serve warm.",
-            photoRes = R.drawable.taco_5),
+            photoRes = R.drawable.taco_1),
         Recipe(
             name = "Fish Tacos",
             recipe = "Fish Tacos\n" +
@@ -1205,7 +1205,7 @@ object DataFactory {
                 "* Juice from 1 lime\n" +
                 "\n" +
                 "tags: vegetarian, vegan",
-            photoRes = R.drawable.taco_5),
+            photoRes = R.drawable.taco_2),
         Recipe(
             name = "Slow Cooker Chicken in Chile de Arbol sauce",
             recipe = "Slow Cooker Chicken in Chile de Arbol sauce\n" +
@@ -1459,7 +1459,7 @@ object DataFactory {
                 "4. Stir and enjoy!\n" +
                 "\n" +
                 "tags: vegetarian, vegan",
-            photoRes = R.drawable.taco_5),
+            photoRes = R.drawable.taco_3),
         Recipe(
             name = "Swiss Chard Tacos",
             recipe = "# Swiss Chard Tacos\n" +
@@ -1759,7 +1759,7 @@ object DataFactory {
                 "tags: vegetarian, vegan\n" +
                 salsaDeAguacate,
             shell = freshCornTortillas,
-            photoRes = R.drawable.taco_5),
+            photoRes = R.drawable.taco_1),
         Recipe(
             name = "Traditional American Taco",
             recipe = "Traditional American Taco\n" +
@@ -1984,7 +1984,7 @@ object DataFactory {
                 "* Old El Paso Taco Seasoning\n" +
                 "\n" +
                 "tags: vegetarian, vegan",
-            photoRes = R.drawable.taco_5),
+            photoRes = R.drawable.taco_2),
         Recipe(
             name = "Tunisian Makloub",
             recipe = "Tunisian Makloub\n" +
@@ -2130,7 +2130,7 @@ object DataFactory {
                 "\n" +
                 "tags: vegetarian",
             baseLayer = cheese,
-            photoRes = R.drawable.taco_5),
+            photoRes = R.drawable.taco_3),
         Recipe(
             name = "Pickle Pita Taco (not really a taco)",
             recipe = "# Pickle Pita Taco (not really a taco)\n" +

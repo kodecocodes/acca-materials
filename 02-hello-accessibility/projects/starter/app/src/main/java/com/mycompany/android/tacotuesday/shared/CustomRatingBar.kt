@@ -130,7 +130,7 @@ class CustomRatingBar @JvmOverloads constructor(
     return super.onTouchEvent(event)
   }
 
-  protected fun onSelected(selectedIndex: Int) {
+  private fun onSelected(selectedIndex: Int) {
     if (selectedIndex == INVALID_VALUE) return
     rating = selectedIndex + 1
     invalidate()

@@ -108,7 +108,9 @@ class DiscoverFragment : Fragment() {
   }
 
   private fun showRecipe(recipe: Recipe) {
-    binding.discoverRecipeImage.setImageResource(recipe.photoRes)
+    binding.discoverRecipeImage.setImageDrawable(
+        binding.root.context.resources.getDrawable(recipe.photoRes, binding.root.context.theme)
+    )
     binding.discoveryCardRecipeDescription.text = markwon.toMarkdown(recipe.recipe)
   }
 

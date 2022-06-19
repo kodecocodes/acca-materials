@@ -15,7 +15,8 @@
         android:name=".onboarding.OnboardingActivity" />
     <activity
         android:name=".MainActivity"
-        android:theme="@style/SplashTheme">
+        android:theme="@style/SplashTheme"
+        android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 

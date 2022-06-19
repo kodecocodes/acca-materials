@@ -32,11 +32,11 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.settings
+package com.mycompany.android.tacotuesday.settings
 
 import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat
-import com.raywenderlich.android.tacotuesday.R
+import com.mycompany.android.tacotuesday.R
 
 class SettingsFragment : PreferenceFragmentCompat() {
 

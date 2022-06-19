@@ -32,7 +32,7 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.detail
+package com.mycompany.android.tacotuesday.detail
 
 import android.content.Intent
 import android.graphics.Rect
@@ -55,9 +55,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.viewModelScope
-import com.raywenderlich.android.tacotuesday.R
-import com.raywenderlich.android.tacotuesday.data.Recipe
-import com.raywenderlich.android.tacotuesday.databinding.FragmentRecipeDetailBinding
+import com.mycompany.android.tacotuesday.R
+import com.mycompany.android.tacotuesday.data.Recipe
+import com.mycompany.android.tacotuesday.databinding.FragmentRecipeDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 import io.noties.markwon.*
 import io.noties.markwon.core.CoreProps

@@ -32,7 +32,7 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.tryIt
+package com.mycompany.android.tacotuesday.tryIt
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -40,8 +40,8 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.raywenderlich.android.tacotuesday.data.Recipe
-import com.raywenderlich.android.tacotuesday.databinding.ItemTryItRecipeBinding
+import com.mycompany.android.tacotuesday.data.Recipe
+import com.mycompany.android.tacotuesday.databinding.ItemTryItRecipeBinding
 
 class TryItRecipesRecyclerViewAdapter(
     private val onDiscardRecipe: (Recipe) -> Unit,

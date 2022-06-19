@@ -32,7 +32,7 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.data
+package com.mycompany.android.tacotuesday.data
 
 import androidx.lifecycle.LiveData
 import javax.inject.Inject

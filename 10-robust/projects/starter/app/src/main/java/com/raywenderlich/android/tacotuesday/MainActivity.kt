@@ -32,7 +32,7 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday
+package com.mycompany.android.tacotuesday
 
 import android.content.Context
 import android.content.Intent
@@ -42,8 +42,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager
-import com.raywenderlich.android.tacotuesday.databinding.ActivityMainBinding
-import com.raywenderlich.android.tacotuesday.onboarding.OnboardingActivity
+import com.mycompany.android.tacotuesday.databinding.ActivityMainBinding
+import com.mycompany.android.tacotuesday.onboarding.OnboardingActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import kotlin.random.Random

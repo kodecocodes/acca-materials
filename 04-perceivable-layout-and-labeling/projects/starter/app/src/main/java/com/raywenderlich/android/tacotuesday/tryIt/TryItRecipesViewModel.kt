@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 Razeware LLC
+ * Copyright (c) 2022 Razeware LLC
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,14 +32,14 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.tryIt
+package com.mycompany.android.tacotuesday.tryIt
 
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import androidx.lifecycle.ViewModel
-import com.raywenderlich.android.tacotuesday.data.RecipeRepository
-import com.raywenderlich.android.tacotuesday.shared.TryDiscardRecipeViewModel
-import com.raywenderlich.android.tacotuesday.shared.TryDiscardRecipeViewModelImpl
+import com.mycompany.android.tacotuesday.data.RecipeRepository
+import com.mycompany.android.tacotuesday.shared.TryDiscardRecipeViewModel
+import com.mycompany.android.tacotuesday.shared.TryDiscardRecipeViewModelImpl
 
 @HiltViewModel
 class TryItRecipesViewModel @Inject constructor(

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 Razeware LLC
+ * Copyright (c) 2022 Razeware LLC
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.onboarding
+package com.mycompany.android.tacotuesday.onboarding
 
 import android.content.Context
 import android.content.Intent
@@ -45,10 +45,10 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
-import com.raywenderlich.android.tacotuesday.MainActivity
-import com.raywenderlich.android.tacotuesday.R
-import com.raywenderlich.android.tacotuesday.databinding.ActivityOnboardingBinding
-import com.raywenderlich.android.tacotuesday.databinding.ItemOnboardingBinding
+import com.mycompany.android.tacotuesday.MainActivity
+import com.mycompany.android.tacotuesday.R
+import com.mycompany.android.tacotuesday.databinding.ActivityOnboardingBinding
+import com.mycompany.android.tacotuesday.databinding.ItemOnboardingBinding
 import kotlinx.coroutines.*
 
 class OnboardingActivity : FragmentActivity() {

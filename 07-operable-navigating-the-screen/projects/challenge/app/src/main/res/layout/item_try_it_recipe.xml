@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (c) 2020 Razeware LLC
+  ~ Copyright (c) 2022 Razeware LLC
   ~
   ~ Permission is hereby granted, free of charge, to any person obtaining a copy
   ~ of this software and associated documentation files (the "Software"), to deal
@@ -116,9 +116,10 @@
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toEndOf="@id/item_recipe_discard"
-      app:layout_constraintTop_toBottomOf="@id/item_recipe_rating" />
+      app:layout_constraintTop_toBottomOf="@id/item_recipe_rating"
+      />
 
-    <com.raywenderlich.android.tacotuesday.shared.CustomRatingBar
+    <com.mycompany.android.tacotuesday.shared.CustomRatingBar
       android:id="@+id/item_recipe_rating"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"

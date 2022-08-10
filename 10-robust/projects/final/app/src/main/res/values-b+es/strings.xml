@@ -6,7 +6,7 @@
   <string name="shared_discard">Descartar</string>
   <string name="shared_details">Detalles</string>
   <string name="shared_dismiss">Descartar</string>
-  <string name="shared_generic_error_message">¡Ups! Tuvimos un error intentando hacer eso</string>
+  <string name="shared_generic_error_message">¡Ups! Tuvimos un error intentando hacer eso\n%s</string>
 
   <!-- Rating bar-->
   <string name="custom_rating_bar_description">%s calificando %d de 5</string>

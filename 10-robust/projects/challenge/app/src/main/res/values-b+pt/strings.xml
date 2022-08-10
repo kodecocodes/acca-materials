@@ -6,7 +6,7 @@
   <string name="shared_discard">Descartar</string>
   <string name="shared_details">Detalhes</string>
   <string name="shared_dismiss">Cancelar</string>
-  <string name="shared_generic_error_message">Taco-com confusão! Encontrámos um problema enquanto estávamos a tentar fazer isto</string>
+  <string name="shared_generic_error_message">Taco-com confusão! Encontrámos um problema enquanto estávamos a tentar fazer isto\n%s</string>
 
   <!-- Rating bar-->
   <string name="custom_rating_bar_description">%s tem uma classificação %d de 5</string>

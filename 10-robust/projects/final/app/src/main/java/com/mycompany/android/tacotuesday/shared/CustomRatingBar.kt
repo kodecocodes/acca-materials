@@ -101,7 +101,6 @@ class CustomRatingBar @JvmOverloads constructor(
     invalidate()
     ViewCompat.setAccessibilityDelegate(this, exploreByTouchHelper)
     accessibilityLiveRegion = ACCESSIBILITY_LIVE_REGION_POLITE
-
   }
 
   override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {

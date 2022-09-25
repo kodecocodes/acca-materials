@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 Razeware LLC
+ * Copyright (c) 2022 Razeware LLC
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,11 +32,11 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.settings
+package com.mycompany.android.tacotuesday.settings
 
 import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat
-import com.raywenderlich.android.tacotuesday.R
+import com.mycompany.android.tacotuesday.R
 
 class SettingsFragment : PreferenceFragmentCompat() {
 

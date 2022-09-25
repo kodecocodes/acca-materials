@@ -40,6 +40,7 @@ import androidx.test.espresso.accessibility.AccessibilityChecks
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.platform.app.InstrumentationRegistry
 import com.google.android.apps.common.testing.accessibility.framework.AccessibilityCheckResultUtils.matchesViews
 import com.nhaarman.mockitokotlin2.*
 import com.mycompany.android.tacotuesday.MainActivity
@@ -85,6 +86,7 @@ class DiscoverFragmentTest {
     runBlocking {
       whenever(repository.randomTacoRecipe()).doReturn(testRecipe)
     }
+
     AccessibilityChecks.enable()
         .setRunChecksFromRootView(true)
         .setSuppressingResultMatcher(
@@ -99,9 +101,8 @@ class DiscoverFragmentTest {
   fun testSwipeToTryItFetchesNewRecipe() {
     runBlocking {
       launchFragment()
-
-      Espresso.onView(ViewMatchers.withId(R.id.discover_recipe_card))
-          .perform(ViewActions.swipeRight())
+      Espresso.onView(ViewMatchers.withId(R.id.discover_button_try))
+          .perform(ViewActions.click())
 
       verify(repository, times(2)).randomTacoRecipe()
     }
@@ -111,17 +112,15 @@ class DiscoverFragmentTest {
   fun testSwipeToDiscardFetchesNewRecipe() {
     runBlocking {
       launchFragment()
-
-      Espresso.onView(ViewMatchers.withId(R.id.discover_recipe_card))
-          .perform(ViewActions.swipeLeft())
-
+      Espresso.onView(ViewMatchers.withId(R.id.discover_button_discard))
+          .perform(ViewActions.click())
       verify(repository, times(2)).randomTacoRecipe()
     }
   }
 
   private fun launchFragment() {
     ActivityScenario.launch(MainActivity::class.java)
-
+    InstrumentationRegistry.getInstrumentation().waitForIdleSync()
     Espresso.onView(ViewMatchers.withText("Close"))
         .perform(ViewActions.click())
   }

@@ -56,7 +56,7 @@ class SwipeToDiscardCallback(
   }
 
   override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-    val itemPosition = viewHolder.adapterPosition
+    val itemPosition = viewHolder.bindingAdapterPosition
     val recipe: Recipe = recipeRecyclerViewAdapter.getRecipeAtPosition(itemPosition)
 
     discard(recipe)

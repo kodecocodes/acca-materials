@@ -38,6 +38,7 @@ import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.matcher.ViewMatchers
+import androidx.test.platform.app.InstrumentationRegistry
 import com.nhaarman.mockitokotlin2.*
 import com.mycompany.android.tacotuesday.MainActivity
 import com.mycompany.android.tacotuesday.R
@@ -88,9 +89,8 @@ class DiscoverFragmentTest {
     runBlocking {
       launchFragment()
 
-      Espresso.onView(ViewMatchers.withId(R.id.discover_recipe_card))
-          .perform(ViewActions.swipeRight())
-
+      Espresso.onView(ViewMatchers.withId(R.id.discover_button_try))
+          .perform(ViewActions.click())
       verify(repository, times(2)).randomTacoRecipe()
     }
   }
@@ -100,16 +100,15 @@ class DiscoverFragmentTest {
     runBlocking {
       launchFragment()
 
-      Espresso.onView(ViewMatchers.withId(R.id.discover_recipe_card))
-          .perform(ViewActions.swipeLeft())
-
+      Espresso.onView(ViewMatchers.withId(R.id.discover_button_discard))
+          .perform(ViewActions.click())
       verify(repository, times(2)).randomTacoRecipe()
     }
   }
 
   private fun launchFragment() {
     ActivityScenario.launch(MainActivity::class.java)
-
+    InstrumentationRegistry.getInstrumentation().waitForIdleSync()
     Espresso.onView(ViewMatchers.withText("Close"))
         .perform(ViewActions.click())
   }

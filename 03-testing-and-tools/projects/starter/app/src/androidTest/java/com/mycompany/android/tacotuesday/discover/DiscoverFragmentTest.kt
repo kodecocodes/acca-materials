@@ -91,7 +91,6 @@ class DiscoverFragmentTest {
 
       Espresso.onView(ViewMatchers.withId(R.id.discover_button_try))
           .perform(ViewActions.click())
-
       verify(repository, times(2)).randomTacoRecipe()
     }
   }
@@ -103,16 +102,13 @@ class DiscoverFragmentTest {
 
       Espresso.onView(ViewMatchers.withId(R.id.discover_button_discard))
           .perform(ViewActions.click())
-
       verify(repository, times(2)).randomTacoRecipe()
     }
   }
 
   private fun launchFragment() {
     ActivityScenario.launch(MainActivity::class.java)
-
     InstrumentationRegistry.getInstrumentation().waitForIdleSync()
-
     Espresso.onView(ViewMatchers.withText("Close"))
         .perform(ViewActions.click())
   }

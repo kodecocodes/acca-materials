@@ -64,7 +64,6 @@ class DiscoverFragment : Fragment() {
       container: ViewGroup?,
       savedInstanceState: Bundle?
   ): View {
-
     binding = FragmentDiscoverBinding.inflate(layoutInflater, container, false)
 
     binding.discoverMotionLayout.setTransitionListener(object : TransitionAdapter() {

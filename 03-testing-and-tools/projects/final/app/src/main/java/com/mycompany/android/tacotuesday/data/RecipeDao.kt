@@ -47,11 +47,12 @@ interface RecipeDao {
   fun getRecipe(id: Long): LiveData<Recipe>
 
   @Query("SELECT * from recipe_table ORDER BY RANDOM() LIMIT 1")
+
   fun getRandomRecipe(): Recipe
 
   @Update
   fun update(recipe: Recipe)
-
+  
   @Insert(onConflict = OnConflictStrategy.IGNORE)
   fun insertAll(recipes: List<Recipe>)
 }

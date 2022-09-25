@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 Razeware LLC
+ * Copyright (c) 2022 Razeware LLC
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.discover
+package com.mycompany.android.tacotuesday.discover
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso
@@ -42,15 +42,15 @@ import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import com.google.android.apps.common.testing.accessibility.framework.AccessibilityCheckResultUtils.matchesViews
 import com.nhaarman.mockitokotlin2.*
-import com.raywenderlich.android.tacotuesday.MainActivity
-import com.raywenderlich.android.tacotuesday.R
-import com.raywenderlich.android.tacotuesday.data.Recipe
-import com.raywenderlich.android.tacotuesday.data.RecipeRepository
-import com.raywenderlich.android.tacotuesday.data.RepositoryModule
+import com.mycompany.android.tacotuesday.MainActivity
+import com.mycompany.android.tacotuesday.R
+import com.mycompany.android.tacotuesday.data.Recipe
+import com.mycompany.android.tacotuesday.data.RecipeRepository
+import com.mycompany.android.tacotuesday.data.RepositoryModule
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.components.SingletonComponent
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.UninstallModules
@@ -127,7 +127,7 @@ class DiscoverFragmentTest {
   }
 
   @Module
-  @InstallIn(ApplicationComponent::class)
+  @InstallIn(SingletonComponent::class)
   object TestModule {
 
     @Provides

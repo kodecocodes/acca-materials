@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.raywenderlich.android.tacotuesday"
+<manifest package="com.mycompany.android.tacotuesday"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -16,7 +16,8 @@
         android:name=".onboarding.OnboardingActivity" />
     <activity
         android:name=".MainActivity"
-        android:theme="@style/SplashTheme">
+        android:theme="@style/SplashTheme"
+        android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 

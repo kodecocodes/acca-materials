@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (c) 2020 Razeware LLC
+  ~ Copyright (c) 2022 Razeware LLC
   ~
   ~ Permission is hereby granted, free of charge, to any person obtaining a copy
   ~ of this software and associated documentation files (the "Software"), to deal
@@ -172,7 +172,7 @@
         android:accessibilityHeading="true"
         android:text="@string/recipe_detail_nacho_rating" />
 
-      <com.raywenderlich.android.tacotuesday.shared.CustomRatingBar
+      <com.mycompany.android.tacotuesday.shared.CustomRatingBar
         android:id="@+id/recipe_nacho_rating"
         android:layout_width="match_parent"
         android:layout_height="@dimen/detail_rating_height"
@@ -198,7 +198,7 @@
         android:accessibilityHeading="true"
         android:text="@string/recipe_detail_spice_rating" />
 
-      <com.raywenderlich.android.tacotuesday.shared.CustomRatingBar
+      <com.mycompany.android.tacotuesday.shared.CustomRatingBar
         android:id="@+id/recipe_spice_rating"
         android:layout_width="match_parent"
         android:layout_height="@dimen/detail_rating_height"

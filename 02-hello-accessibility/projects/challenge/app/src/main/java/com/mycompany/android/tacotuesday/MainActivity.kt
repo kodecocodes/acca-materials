@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
     val binding = ActivityMainBinding.inflate(layoutInflater)
     setContentView(binding.root)
 
-    binding.bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+    binding.bottomNavigationView.setOnItemSelectedListener { item ->
       when (item.itemId) {
         R.id.item_discover -> {
           findNavController(R.id.nav_host_fragment).navigate(R.id.discoverFragment)

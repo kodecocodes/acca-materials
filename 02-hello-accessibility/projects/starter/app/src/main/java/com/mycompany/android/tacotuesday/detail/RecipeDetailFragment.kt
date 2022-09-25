@@ -44,7 +44,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.lifecycle.viewModelScope
 import com.mycompany.android.tacotuesday.R
 import com.mycompany.android.tacotuesday.data.Recipe
@@ -78,16 +77,16 @@ class RecipeDetailFragment : Fragment() {
       inflater: LayoutInflater,
       container: ViewGroup?,
       savedInstanceState: Bundle?
-  ): View? {
+  ): View {
     binding = FragmentRecipeDetailBinding.inflate(layoutInflater, container, false)
-    viewModel.recipe.observe(viewLifecycleOwner, { recipe ->
+    viewModel.recipe.observe(viewLifecycleOwner) { recipe ->
       showRecipeDetails(recipe)
       if (recipe.wantsToTry) {
         showEditableFields(recipe)
       } else {
         hideEditableFields(recipe)
       }
-    })
+    }
     return binding.root
   }
 

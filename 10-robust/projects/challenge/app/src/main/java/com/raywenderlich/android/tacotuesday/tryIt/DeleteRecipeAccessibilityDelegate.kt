@@ -1,10 +1,10 @@
-package com.raywenderlich.android.tacotuesday.tryIt
+package com.mycompany.android.tacotuesday.tryIt
 
 import android.view.View
 import android.view.accessibility.AccessibilityNodeInfo
 import androidx.core.view.AccessibilityDelegateCompat
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
-import com.raywenderlich.android.tacotuesday.R
+import com.mycompany.android.tacotuesday.R
 
 class DeleteRecipeAccessibilityDelegate(
     private val recipeName: String

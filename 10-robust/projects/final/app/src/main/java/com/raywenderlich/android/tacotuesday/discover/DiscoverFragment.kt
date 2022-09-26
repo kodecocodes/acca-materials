@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 Razeware LLC
+ * Copyright (c) 2022 Razeware LLC
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.discover
+package com.mycompany.android.tacotuesday.discover
 
 import android.os.Bundle
 import android.util.TypedValue
@@ -44,9 +44,9 @@ import androidx.constraintlayout.motion.widget.TransitionAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.raywenderlich.android.tacotuesday.R
-import com.raywenderlich.android.tacotuesday.data.Recipe
-import com.raywenderlich.android.tacotuesday.databinding.FragmentDiscoverBinding
+import com.mycompany.android.tacotuesday.R
+import com.mycompany.android.tacotuesday.data.Recipe
+import com.mycompany.android.tacotuesday.databinding.FragmentDiscoverBinding
 import dagger.hilt.android.AndroidEntryPoint
 import io.noties.markwon.AbstractMarkwonPlugin
 import io.noties.markwon.Markwon

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (c) 2020 Razeware LLC
+  ~ Copyright (c) 2022 Razeware LLC
   ~
   ~ Permission is hereby granted, free of charge, to any person obtaining a copy
   ~ of this software and associated documentation files (the "Software"), to deal
@@ -43,9 +43,13 @@
 
   <com.google.android.material.button.MaterialButton
     android:id="@+id/discover_button_discard"
-    style="@style/Widget.MaterialComponents.Button.TextButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="?colorBackgroundFloating"
+    android:clickable="true"
+    android:focusable="true"
+    android:contentDescription="@string/shared_discard"
+    style="@style/Widget.MaterialComponents.Button.TextButton"
     android:layout_margin="@dimen/space_normal"
     android:text="No thanks"
     app:icon="@drawable/ic_baseline_thumb_down_24"
@@ -57,17 +61,20 @@
 
   <com.google.android.material.button.MaterialButton
     android:id="@+id/discover_button_try"
-    style="@style/Widget.MaterialComponents.Button.TextButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="?colorBackgroundFloating"
+    android:clickable="true"
+    android:focusable="true"
+    android:contentDescription="@string/shared_try_it"
+    style="@style/Widget.MaterialComponents.Button.TextButton"
     android:layout_margin="@dimen/space_normal"
     android:text="Save for later"
     app:icon="@drawable/ic_baseline_thumb_up_24"
     app:iconPadding="@dimen/drawable_padding"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toEndOf="@id/discover_button_discard"
-    />
+    app:layout_constraintStart_toEndOf="@id/discover_button_discard" />
 
   <com.google.android.material.card.MaterialCardView
     android:id="@+id/discover_recipe_card_new"

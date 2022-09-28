@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 Razeware LLC
+ * Copyright (c) 2022 Razeware LLC
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.tacotuesday.detail
+package com.mycompany.android.tacotuesday.detail
 
 import android.content.Intent
 import android.net.Uri
@@ -52,9 +52,9 @@ import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.viewModelScope
-import com.raywenderlich.android.tacotuesday.R
-import com.raywenderlich.android.tacotuesday.data.Recipe
-import com.raywenderlich.android.tacotuesday.databinding.FragmentRecipeDetailBinding
+import com.mycompany.android.tacotuesday.R
+import com.mycompany.android.tacotuesday.data.Recipe
+import com.mycompany.android.tacotuesday.databinding.FragmentRecipeDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 import io.noties.markwon.*
 import io.noties.markwon.core.CoreProps

@@ -6,7 +6,7 @@
   <string name="shared_discard">Odbaci</string>
   <string name="shared_details">Pojedinosti</string>
   <string name="shared_dismiss">Napusti</string>
-  <string name="shared_generic_error_message">Taco problem! Naišli smo na grešku!</string>
+  <string name="shared_generic_error_message">Taco problem! Naišli smo na grešku!\n%s</string>
 
   <!-- Rating bar-->
   <string name="custom_rating_bar_description">%s ima ocjenu %d od 5</string>

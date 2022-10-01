@@ -36,12 +36,12 @@ android {
   kotlinOptions {
     jvmTarget = JavaVersion.VERSION_1_8.toString()
   }
-
   packagingOptions {
     resources {
       excludes += ['META-INF/atomicfu.kotlin_module']
     }
   }
+
 }
 
 dependencies {

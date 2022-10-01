@@ -6,7 +6,7 @@
   <string name="shared_discard">Afleggen</string>
   <string name="shared_details">Details</string>
   <string name="shared_dismiss">Wegzenden</string>
-  <string name="shared_generic_error_message">Taco-bout a mess! We ran into an error when trying to do that</string>
+  <string name="shared_generic_error_message">Taco-bout a mess! We ran into an error when trying to do that\n%s</string>
 
   <!-- Rating bar-->
   <string name="custom_rating_bar_description">%s beoordeling %d uit 5</string>

@@ -40,7 +40,10 @@ import androidx.test.espresso.accessibility.AccessibilityChecks
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
+<<<<<<< HEAD
 import androidx.test.platform.app.InstrumentationRegistry
+=======
+>>>>>>> origin/editions/2.0
 import com.google.android.apps.common.testing.accessibility.framework.AccessibilityCheckResultUtils.matchesViews
 import com.nhaarman.mockitokotlin2.*
 import com.mycompany.android.tacotuesday.MainActivity
@@ -51,10 +54,17 @@ import com.mycompany.android.tacotuesday.data.RepositoryModule
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+<<<<<<< HEAD
 import dagger.hilt.components.SingletonComponent
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.UninstallModules
+=======
+import dagger.hilt.android.testing.HiltAndroidRule
+import dagger.hilt.android.testing.HiltAndroidTest
+import dagger.hilt.android.testing.UninstallModules
+import dagger.hilt.components.SingletonComponent
+>>>>>>> origin/editions/2.0
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.Matchers.anyOf
 import org.junit.Before
@@ -86,7 +96,10 @@ class DiscoverFragmentTest {
     runBlocking {
       whenever(repository.randomTacoRecipe()).doReturn(testRecipe)
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/editions/2.0
     AccessibilityChecks.enable()
         .setRunChecksFromRootView(true)
         .setSuppressingResultMatcher(
@@ -102,8 +115,13 @@ class DiscoverFragmentTest {
     runBlocking {
       launchFragment()
 
+<<<<<<< HEAD
       Espresso.onView(ViewMatchers.withId(R.id.discover_button_try))
           .perform(ViewActions.click())
+=======
+      Espresso.onView(ViewMatchers.withId(R.id.discover_recipe_card))
+          .perform(ViewActions.swipeRight())
+>>>>>>> origin/editions/2.0
 
       verify(repository, times(2)).randomTacoRecipe()
     }
@@ -114,8 +132,13 @@ class DiscoverFragmentTest {
     runBlocking {
       launchFragment()
 
+<<<<<<< HEAD
       Espresso.onView(ViewMatchers.withId(R.id.discover_button_discard))
           .perform(ViewActions.click())
+=======
+      Espresso.onView(ViewMatchers.withId(R.id.discover_recipe_card))
+          .perform(ViewActions.swipeLeft())
+>>>>>>> origin/editions/2.0
 
       verify(repository, times(2)).randomTacoRecipe()
     }
@@ -123,8 +146,11 @@ class DiscoverFragmentTest {
 
   private fun launchFragment() {
     ActivityScenario.launch(MainActivity::class.java)
+<<<<<<< HEAD
 
     InstrumentationRegistry.getInstrumentation().waitForIdleSync()
+=======
+>>>>>>> origin/editions/2.0
   }
 
   @Module

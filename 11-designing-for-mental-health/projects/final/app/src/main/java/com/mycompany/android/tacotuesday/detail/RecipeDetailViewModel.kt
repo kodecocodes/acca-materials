@@ -34,13 +34,13 @@
 
 package com.mycompany.android.tacotuesday.detail
 
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.mycompany.android.tacotuesday.shared.TryDiscardRecipeViewModel
 import com.mycompany.android.tacotuesday.shared.TryDiscardRecipeViewModelImpl
 import com.mycompany.android.tacotuesday.data.RecipeRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
 @HiltViewModel
 class RecipeDetailViewModel @Inject constructor(

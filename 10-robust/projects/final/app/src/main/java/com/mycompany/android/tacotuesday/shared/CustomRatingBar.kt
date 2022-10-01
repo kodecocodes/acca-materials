@@ -48,10 +48,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import androidx.customview.widget.ExploreByTouchHelper
 import com.mycompany.android.tacotuesday.R
-<<<<<<< HEAD:10-robust/projects/final/app/src/main/java/com/mycompany/android/tacotuesday/shared/CustomRatingBar.kt
-
-=======
->>>>>>> a434ec4898b126f9d58499e5fca6d98e01bf834a:10-robust/projects/final/app/src/main/java/com/raywenderlich/android/tacotuesday/shared/CustomRatingBar.kt
 
 class CustomRatingBar @JvmOverloads constructor(
     context: Context,

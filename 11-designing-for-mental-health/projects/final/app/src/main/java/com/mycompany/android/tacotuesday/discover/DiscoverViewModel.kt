@@ -53,7 +53,7 @@ import javax.inject.Inject
 class DiscoverViewModel @Inject constructor(
     private val recipeRepository: RecipeRepository,
     private val sharedPreferences: SharedPreferences,
-    savedStateHandle: SavedStateHandle
+    savedStateHandle: SavedStateHandle,
 ) : ViewModel(), TryDiscardRecipeViewModel by TryDiscardRecipeViewModelImpl(
     recipeRepository) {
 

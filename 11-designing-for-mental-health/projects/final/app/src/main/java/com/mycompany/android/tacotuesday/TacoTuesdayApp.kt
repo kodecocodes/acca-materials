@@ -48,6 +48,7 @@ open class TacoTuesdayApp : Application() {
 
   override fun onCreate() {
     super.onCreate()
+
     AppCompatDelegate.setDefaultNightMode(
         if (sharedPreferences.getBoolean("dark_mode", false)) {
           AppCompatDelegate.MODE_NIGHT_YES
